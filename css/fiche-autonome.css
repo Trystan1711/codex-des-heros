@@ -1,0 +1,669 @@
+/* ═══════════════════════════════════════════════════════════════
+   CODEX DES HÉROS — fiche autonome (fichier HTML téléchargé)
+   S'ajoute à codex.css, creation.css, fiche.css et codex-ajouts.css,
+   intégrés dans le même fichier : même charte, mêmes composants.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Barre ────────────────────────────────────────────────────── */
+
+.etat-sauvegarde {
+  max-width: 22rem;
+  font-style: italic;
+  font-size: .95rem;
+  line-height: 1.3;
+  color: rgba(242, 220, 150, .75);
+  text-align: right;
+}
+.etat-sauvegarde.est-en-retard { color: var(--or-3); }
+.barre-actions { align-items: center; }
+
+.royaume-ligne {
+  margin: -.6rem 0 1.3rem;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--encre-3);
+}
+.royaume-ligne:empty { display: none; }
+
+/* ─── Niveau ───────────────────────────────────────────────────── */
+
+.niveau {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--filet);
+}
+.niveau-tete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem 1rem;
+}
+.niveau-medaillon {
+  background: var(--feuille-or);
+  background-size: 200% 200%;
+  color: #3a2608;
+  text-shadow: 0 1px 0 rgba(255, 240, 200, .5);
+  box-shadow: 0 0 0 2px var(--velin-clair), 0 0 0 3px var(--or-1), 0 6px 14px -6px rgba(60, 38, 12, .5);
+}
+.niveau-boutons { display: flex; flex-wrap: wrap; gap: .5rem; }
+.niveau-regle { margin-top: .8rem; }
+.niveau-choix {
+  margin-top: 1rem;
+  padding: .9rem 1rem;
+  background: rgba(36, 68, 125, .06);
+  border-left: 2px solid var(--lapis);
+  animation: monte .5s var(--ease) both;
+}
+.niveau-choix p { font-style: italic; color: var(--encre-2); line-height: 1.4; }
+.niveau-choix-boutons { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
+
+/* ─── Points de vie, réserve, bourse ──────────────────────────── */
+
+.ressources {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem 2.6rem;
+}
+.ressource-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.ressource-max {
+  font-style: italic;
+  color: var(--encre-3);
+}
+.ressource-max b {
+  font-family: var(--f-chiffres);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.35rem;
+  font-variant-numeric: lining-nums;
+  color: var(--encre);
+}
+.jauge-ressource {
+  height: 8px;
+  margin: .9rem 0 .2rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--velin-3);
+  box-shadow: inset 0 1px 2px rgba(60, 38, 12, .25);
+}
+.jauge-ressource span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--rubrique-fonce), var(--rubrique) 70%, #c8553e);
+  transition: width .6s var(--ease);
+}
+.ressource--pm .jauge-ressource span {
+  background: linear-gradient(90deg, var(--lapis-fonce), var(--lapis) 70%, #4f70ad);
+}
+.ressource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: .6rem .7rem;
+  margin-top: .8rem;
+}
+.champ--nombre { width: 5.6rem; }
+.champ--nombre input { font-family: var(--f-chiffres); font-variant-numeric: lining-nums; }
+
+.bourse .vital { margin-bottom: .2rem; }
+.bourse-piece {
+  width: auto;
+  min-width: 3.6rem;
+  padding: 0 .7rem;
+  border-radius: 999px;
+  background: var(--feuille-or);
+  color: #3a2608;
+  text-shadow: 0 1px 0 rgba(255, 240, 200, .5);
+  box-shadow: 0 0 0 2px var(--velin-clair), 0 0 0 3px var(--or-1), 0 6px 14px -6px rgba(60, 38, 12, .5);
+}
+
+/* ─── Étiquettes de sources ───────────────────────────────────── */
+
+.legende-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 1.2rem;
+}
+.etiquette {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  padding: .05rem .5rem .1rem;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-family: var(--f-capitales);
+  font-size: .92rem;
+  line-height: 1.35;
+  font-variant-numeric: lining-nums;
+  white-space: nowrap;
+}
+.etiquette--race   { color: var(--encre-2); border-color: var(--filet-fort); }
+.etiquette--metier { color: var(--rubrique); }
+.etiquette--niveau { color: var(--vert-de-gris); }
+.etiquette--objet  { color: #3a2608; border-color: var(--or-1); background: linear-gradient(115deg, #f2dc96, #d8b462); }
+.etiquette--boost  { color: var(--velin-clair); border-color: var(--lapis-fonce); background: var(--lapis); }
+.etiquette--malus  { color: var(--velin-clair); border-color: var(--rubrique-fonce); background: var(--rubrique-fonce); }
+.etiquette--degats { color: var(--velin-clair); border-color: var(--rubrique-fonce); background: var(--rubrique); }
+
+.points-libres {
+  margin-bottom: 1.2rem;
+  padding: .7rem .9rem;
+  font-style: italic;
+  color: var(--encre-2);
+  background: rgba(60, 106, 85, .08);
+  border-left: 2px solid var(--vert-de-gris);
+}
+.points-libres b {
+  font-family: var(--f-chiffres);
+  font-style: normal;
+  font-size: 1.2rem;
+  color: var(--vert-de-gris);
+}
+
+/* ─── Compétences ──────────────────────────────────────────────── */
+
+.comp {
+  padding: .45rem .6rem .55rem;
+  border-radius: 2px;
+  transition: background-color .3s, box-shadow .3s;
+}
+.comp-ligne {
+  display: flex;
+  align-items: baseline;
+  gap: .45rem;
+}
+.comp .competence-nom {
+  font-family: var(--f-capitales);
+  font-size: 1.16rem;
+  color: var(--encre);
+}
+.comp-total {
+  min-width: 2ch;
+  font-family: var(--f-chiffres);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-align: right;
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--encre);
+}
+.comp-jet {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--filet-fort);
+  border-radius: 50%;
+  background: var(--velin-clair);
+  color: var(--encre-2);
+  cursor: pointer;
+  transition: background-color .25s, color .25s, transform .4s var(--ressort);
+}
+.comp-jet:hover { background: var(--encre); color: var(--velin); transform: rotate(-20deg); }
+.comp-jet .icone { width: 1.1rem; height: 1.1rem; }
+
+.comp-sources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem;
+  margin: .35rem 0 .4rem;
+}
+.comp-points {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  margin-left: auto;
+}
+.comp-cout {
+  font-style: italic;
+  font-size: .88rem;
+  color: var(--encre-3);
+}
+
+.mini {
+  display: inline-grid;
+  place-items: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  padding: 0;
+  border: 1px solid var(--filet-fort);
+  border-radius: 2px;
+  background: var(--velin-clair);
+  color: var(--encre);
+  font-family: var(--f-chiffres);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+.mini:hover { background: var(--encre); color: var(--velin); }
+.mini:disabled { opacity: .35; cursor: not-allowed; pointer-events: none; }
+
+/* Une compétence modifiée par un objet ou un boost se repère d'un coup d'œil */
+.comp.a-objet { background: rgba(242, 220, 150, .3); box-shadow: inset 3px 0 0 var(--or-2); }
+.comp.a-objet .comp-total { color: var(--or-1); }
+.comp.a-boost { background: rgba(36, 68, 125, .07); box-shadow: inset 3px 0 0 var(--lapis); }
+.comp.a-boost .comp-total { color: var(--lapis); }
+.comp.a-objet.a-boost { box-shadow: inset 3px 0 0 var(--or-2), inset 6px 0 0 var(--lapis); }
+.comp.a-malus { box-shadow: inset 3px 0 0 var(--rubrique-fonce); }
+.comp.a-malus .comp-total { color: var(--rubrique-fonce); }
+.comp.a-malus.a-objet,
+.comp.a-malus.a-boost { box-shadow: inset 3px 0 0 var(--or-2), inset 6px 0 0 var(--rubrique-fonce); }
+
+.jauge-sources {
+  position: relative;
+  display: flex;
+  height: 5px;
+  overflow: hidden;
+  background: repeating-linear-gradient(90deg,
+    transparent 0 calc(100% / 20 - 1px),
+    var(--filet) calc(100% / 20 - 1px) calc(100% / 20));
+  box-shadow: inset 0 -1px 0 var(--filet);
+}
+.segment { flex: none; height: 100%; }
+.segment--race   { background: var(--encre-2); }
+.segment--metier { background: var(--rubrique); }
+.segment--niveau { background: var(--vert-de-gris); }
+.segment--objet  { background: var(--or-2); }
+.segment--boost  { background: var(--lapis); }
+.segment-malus {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(45deg, var(--rubrique-fonce) 0 2px, rgba(244, 236, 217, .9) 2px 4px);
+}
+.regle-jet { margin-top: 1rem; }
+
+/* ─── Boosts ───────────────────────────────────────────────────── */
+
+.boosts {
+  display: grid;
+  gap: .6rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+.boost {
+  display: grid;
+  grid-template-columns: 6.2rem minmax(0, 1.5fr) minmax(0, 1fr) 5.6rem auto;
+  align-items: end;
+  gap: .6rem .9rem;
+  padding: .6rem .8rem .7rem;
+  border-radius: 2px;
+  background: rgba(251, 246, 234, .5);
+  box-shadow: inset 0 0 0 1px var(--filet);
+  transition: background-color .3s, box-shadow .3s, opacity .3s;
+}
+.boost:not(.est-actif) { opacity: .62; }
+.boost.est-actif { background: rgba(36, 68, 125, .07); box-shadow: inset 0 0 0 1px var(--lapis), inset 3px 0 0 var(--lapis); }
+.boost.est-actif.est-malus { background: rgba(111, 29, 16, .07); box-shadow: inset 0 0 0 1px var(--rubrique-fonce), inset 3px 0 0 var(--rubrique-fonce); }
+.boost .champ,
+.bonus-ligne .champ { grid-column: auto; gap: 0; }
+
+.case {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-family: var(--f-capitales);
+  font-size: 1rem;
+  color: var(--encre-2);
+  cursor: pointer;
+}
+.case input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--lapis);
+  cursor: pointer;
+}
+.boost-actif { padding-bottom: .35rem; }
+
+.croix {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--filet-fort);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--encre-2);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.croix:hover { background: var(--rubrique); border-color: var(--rubrique); color: var(--velin-clair); }
+
+.vide { list-style: none; padding: .4rem 0; }
+
+/* ─── Sorts & équipement ──────────────────────────────────────── */
+
+.cartes + .bouton-ajout,
+#sortsEntete + .cartes { margin-top: 1.2rem; }
+
+/* Sorts qui ne sont plus débloqués (palier de Magie perdu) : filet vermillon,
+   comme les malus actifs */
+.carte--sort.est-verrouille {
+  box-shadow: inset 0 0 0 1px var(--rubrique), inset 3px 0 0 var(--rubrique);
+}
+.sorts-perdus {
+  margin-top: .9rem;
+  padding: .2rem .9rem .7rem;
+  background: rgba(111, 29, 16, .07);
+  border-left: 2px solid var(--rubrique);
+}
+.sorts-perdus .carte-actions { margin-top: .5rem; padding-top: 0; border-top: 0; }
+
+/* Équipement : une section par catégorie (mêlée, distance, armures, boucliers, objets) */
+.equipement-categorie + .equipement-categorie { margin-top: 2.4rem; }
+.equipement-categorie .titre-filet { margin-bottom: .4rem; font-size: 1.15rem; }
+.equipement-categorie .titre-filet .note { font-size: .98rem; letter-spacing: .02em; }
+.equipement-categorie .cartes { margin-top: 1rem; }
+
+/* Onglets des fenêtres d'objet et de sort : passent à la ligne sur petit écran */
+#ongletsObjet,
+#ongletsSort { flex-wrap: wrap; }
+.bouton-ajout { margin-top: 1.1rem; }
+.carte-alerte {
+  clear: both;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding-top: .55rem;
+  font-family: var(--f-capitales);
+  font-size: .95rem;
+  color: var(--rubrique);
+}
+.carte-degats,
+.carte-bonus {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem .5rem;
+  padding-top: .6rem;
+}
+.carte .case { margin-right: .3rem; }
+.carte-actions .bouton--discret { padding-inline: .55rem; }
+.quantite {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+}
+.quantite-valeur {
+  min-width: 2.2rem;
+  text-align: center;
+  font-family: var(--f-chiffres);
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
+}
+
+/* ─── Notes ────────────────────────────────────────────────────── */
+
+textarea.notes { min-height: 12.6rem; }
+
+/* ─── Grimoire (fenêtre d'ajout de sort) ──────────────────────── */
+
+.onglets {
+  display: flex;
+  gap: .3rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid var(--filet);
+}
+.onglets[hidden] { display: none; }
+.onglet {
+  margin-bottom: -1px;
+  padding: .55rem 1rem .5rem;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  background: none;
+  color: var(--encre-3);
+  font-family: var(--f-capitales);
+  font-size: 1.08rem;
+  cursor: pointer;
+}
+.onglet[aria-selected="true"] {
+  border-color: var(--filet);
+  background: var(--velin-clair);
+  color: var(--encre);
+}
+.onglet-panneau[hidden] { display: none; }
+
+/* Tirage d'un sort : palier choisi, puis le sort tiré */
+#grimoire .paliers--choix { margin-top: 1.1rem; }
+#tirage { margin-top: 1.2rem; }
+#tirage:empty { display: none; }
+
+/* ─── Formulaire d'objet ──────────────────────────────────────── */
+
+#dlgObjet .champs,
+#dlgSort .champs { margin-top: .4rem; }
+.form-degats { margin-top: .8rem; color: var(--rubrique); }
+.form-degats:empty { display: none; }
+.bonus-objet {
+  margin: 1.2rem 0 1rem;
+  padding: 0;
+  border: 0;
+}
+.bonus-liste { margin: .5rem 0; padding: 0; list-style: none; display: grid; gap: .5rem; }
+.bonus-ligne {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 5.6rem auto;
+  align-items: end;
+  gap: .8rem;
+}
+
+/* ─── Messages ─────────────────────────────────────────────────── */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  z-index: 60;
+  max-width: min(560px, calc(100vw - 32px));
+  padding: .8rem 1.2rem;
+  color: var(--encre);
+  font-family: var(--f-titre);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  background-color: var(--velin-clair);
+  background-image: var(--grain);
+  box-shadow: 0 0 0 1px var(--filet-fort), 0 24px 48px -20px rgba(0, 0, 0, .7);
+  border-left: 4px solid var(--or-2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 24px);
+  transition: opacity .3s var(--ease), transform .4s var(--ease);
+}
+.toast.est-visible { opacity: 1; transform: translate(-50%, 0); }
+.toast--succes { border-left-color: var(--vert-de-gris); }
+.toast--erreur { border-left-color: var(--rubrique); }
+
+/* ─── Adaptations ──────────────────────────────────────────────── */
+
+.charte-duo .apparence-liste { grid-template-columns: minmax(0, 1fr); }
+
+@media (max-width: 760px) {
+  .ressources { grid-template-columns: minmax(0, 1fr); }
+  .boost { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .boost-actif { grid-column: 1 / -1; padding-bottom: 0; }
+  .boost .croix { justify-self: end; }
+  .etat-sauvegarde { text-align: center; max-width: none; width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .comp-points { margin-left: 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FICHE COMPACTE — tout se lit d'un coup d'œil, sans descendre
+   Mêmes couleurs, polices et composants ; marges et tailles resserrées.
+   ═══════════════════════════════════════════════════════════════ */
+
+.barre { max-width: 1500px; padding: 12px clamp(14px, 3vw, 28px) 10px; }
+.fiche-page { padding: 0 clamp(8px, 1.6vw, 18px) 24px; }
+
+.charte--compacte {
+  --marge-cadre: 8px;
+  max-width: 1500px;
+  padding: clamp(24px, 2.4vw, 32px) clamp(26px, 3vw, 44px) clamp(14px, 1.6vw, 20px);
+}
+.charte--compacte .coin { width: 22px; height: 22px; }
+
+/* En-tête : portrait, nom et identité, niveau — sur une ligne */
+.fiche-tete {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .8rem 1.4rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid var(--filet);
+}
+.fiche-portrait { width: 80px; }
+.fiche-portrait .medaillon-initiales { font-size: 1.9rem; }
+.charte--compacte .charte-nom { margin: 0; font-size: clamp(1.7rem, 2.6vw, 2.3rem); text-align: left; }
+.charte--compacte .charte-nom .initiale-or { font-size: 1.3em; }
+.charte--compacte .charte-lignee { justify-content: flex-start; gap: .1rem .5rem; margin: .1rem 0 .2rem; font-size: 1.05rem; }
+.identite-ligne { display: flex; flex-wrap: wrap; gap: .15rem 1.2rem; margin: 0; }
+.identite-ligne div { display: flex; align-items: baseline; gap: .35rem; }
+.identite-ligne dt { font-family: var(--f-capitales); font-size: .92rem; color: var(--encre-3); }
+.identite-ligne dd { margin: 0; font-family: var(--f-titre); font-size: 1.08rem; color: var(--encre); }
+.charte--compacte .niveau { margin: 0; padding: 0; border: 0; }
+.charte--compacte .niveau-tete { flex-wrap: nowrap; gap: .8rem; }
+.charte--compacte .niveau-boutons { flex-direction: column; gap: .25rem; }
+#niveauChoix:empty { display: none; }
+#niveauChoix .niveau-choix { margin-top: .6rem; padding: .5rem .8rem; }
+#niveauChoix .niveau-choix-boutons { margin-top: .4rem; }
+#niveauChoix .niveau-regle { margin-top: .35rem; }
+
+/* PV, réserve de magie et bourse, côte à côte */
+.ressources--trois {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .6rem 1.6rem;
+  margin-top: .7rem;
+  padding-bottom: .7rem;
+  border-bottom: 1px solid var(--filet);
+}
+.charte--compacte .vital-medaillon { width: 2.8rem; height: 2.8rem; font-size: 1.1rem; }
+.charte--compacte .bourse-piece { min-width: 2.8rem; width: auto; }
+.charte--compacte .vital-libelle { font-size: .92rem; }
+.vital-libelle .ressource-max { font-family: var(--f-texte); font-size: .92rem; }
+.vital-libelle .ressource-max b { font-size: 1.05rem; }
+.charte--compacte .jauge-ressource { height: 6px; margin: .45rem 0 0; }
+.charte--compacte .ressource-actions { gap: .3rem .4rem; margin-top: .4rem; }
+.charte--compacte .champ--nombre { width: 4.2rem; }
+.charte--compacte .champ--compact .champ-libelle { font-size: .78rem; }
+.charte--compacte .champ--compact input { padding: 0 .1rem .1rem; font-size: 1rem; }
+.charte--compacte .bouton--petit { padding: .3rem .65rem .32rem; font-size: .88rem; }
+
+/* Trois colonnes : compétences · sorts et don du métier · équipement */
+.fiche-grille {
+  display: grid;
+  grid-template-columns: minmax(270px, 310px) minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: start;
+  gap: .8rem 1.5rem;
+  margin-top: .7rem;
+}
+.charte--compacte .fiche-bloc > .titre-filet { margin-bottom: .4rem; font-size: 1rem; }
+#apparenceSection { margin-top: .8rem; padding-top: .6rem; border-top: 1px solid var(--filet); }
+
+/* Compétences : une ligne chacune (le détail du total est en infobulle) */
+.comps { display: grid; margin: 0; padding: 0; list-style: none; }
+.charte--compacte .comp { padding: .18rem .35rem; }
+.charte--compacte .comp-ligne { align-items: center; gap: .35rem; }
+.charte--compacte .comp .competence-nom { font-size: 1rem; }
+.charte--compacte .comp .points { transform: translateY(.2em); }
+.charte--compacte .comp-total { font-size: 1.25rem; cursor: help; }
+.charte--compacte .comp-jet { width: 1.6rem; height: 1.6rem; }
+.charte--compacte .comp-jet .icone { width: .9rem; height: .9rem; }
+.comp .comp-palier { margin: 0; font-size: .84rem; white-space: nowrap; cursor: help; }
+.comp .comp-palier b { font-size: .9rem; }
+.charte--compacte .comp-sources { justify-content: flex-end; margin: .1rem 0; }
+.charte--compacte .points-libres { margin-bottom: .4rem; padding: .35rem .6rem; font-size: .92rem; line-height: 1.3; }
+.charte--compacte .points-libres b { font-size: 1.05rem; }
+
+/* Cartes resserrées (sorts, don du métier, équipement) */
+.charte--compacte .cartes { grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: .55rem; margin-top: .55rem; }
+.charte--compacte #sortsEntete + .cartes { margin-top: .5rem; }
+.charte--compacte .carte { padding: .55rem .65rem .5rem .55rem; }
+.charte--compacte .carte .lettrine-bloc { width: 2.1rem; height: 2.1rem; margin: .1rem .5rem .15rem 0; }
+.charte--compacte .carte .lettrine-bloc > span { font-size: 1.45rem; }
+.charte--compacte .carte-titre { padding-top: 0; font-size: 1.08rem; }
+.charte--compacte .carte-meta { margin-top: 0; font-size: .85rem; }
+.charte--compacte .carte-texte { padding-top: .3rem; font-size: .93rem; line-height: 1.32; }
+.charte--compacte .carte-degats,
+.charte--compacte .carte-bonus { gap: .2rem .35rem; padding-top: .3rem; }
+.charte--compacte .carte-alerte { padding-top: .25rem; font-size: .85rem; }
+.charte--compacte .etiquette { padding: 0 .35rem .05rem; font-size: .8rem; }
+.charte--compacte .carte-actions { gap: .25rem .35rem; margin-top: .4rem; padding-top: .35rem; }
+.charte--compacte .carte-actions .bouton--petit { padding: .2rem .36rem; font-size: .82rem; letter-spacing: .03em; }
+.charte--compacte .fiche-bloc--objets .carte-actions { margin-top: .3rem; padding-top: 0; border-top: 0; }
+.charte--compacte .mini { width: 1.35rem; height: 1.35rem; font-size: .9rem; }
+.charte--compacte .case { gap: .3rem; font-size: .88rem; }
+.charte--compacte .quantite-valeur { min-width: 1.6rem; }
+.charte--compacte .bouton-ajout { margin-top: .5rem; }
+.charte--compacte .vide { padding: .2rem 0; }
+
+/* Don du métier : même carte que les sorts, avec le filet vermillon des repères */
+.carte--don { box-shadow: inset 0 0 0 1px var(--filet), inset 3px 0 0 var(--rubrique); }
+
+/* En-tête des sorts : Magie réelle et paliers en petit */
+.charte--compacte .sorts-magie { font-size: .98rem; }
+.charte--compacte .sorts-magie b { font-size: 1.25rem; }
+.charte--compacte .paliers { gap: 3px; margin: .35rem 0 .2rem; }
+.charte--compacte .palier { padding: .18rem .1rem .15rem; }
+.charte--compacte .palier-nom { font-size: .8rem; }
+.charte--compacte .palier-seuil { font-size: .72rem; }
+.charte--compacte .sorts-perdus { margin-top: .45rem; padding: .05rem .65rem .45rem; }
+
+/* Équipement : boutons d'ajout sur une ligne, catégories non vides seulement */
+.equipement-ajout { display: flex; flex-wrap: wrap; gap: .4rem; }
+.charte--compacte .equipement-categorie,
+.charte--compacte .equipement-categorie + .equipement-categorie { margin-top: .6rem; }
+.equipement-titre {
+  margin: 0;
+  font-family: var(--f-capitales);
+  font-weight: 400;
+  font-size: .95rem;
+  letter-spacing: .04em;
+  color: var(--rubrique);
+}
+.equipement-titre .note { font-size: .85rem; letter-spacing: 0; }
+.charte--compacte .equipement-categorie .cartes { margin-top: .3rem; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+.charte--compacte #sorts { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+
+/* Apparence et pied de page discrets */
+.charte--compacte .apparence-liste { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .15rem 1.6rem; }
+.charte--compacte .apparence-liste dt { font-size: .88rem; }
+.charte--compacte .apparence-liste dd { font-size: 1rem; }
+.charte--compacte .charte-pied { margin-top: .7rem; padding-top: .5rem; font-size: .85rem; }
+
+@media (max-width: 1250px) {
+  .fiche-grille { grid-template-columns: minmax(260px, 310px) minmax(0, 1fr); }
+  .fiche-bloc--objets { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) {
+  .fiche-grille { grid-template-columns: minmax(0, 1fr); }
+  .ressources--trois { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ressource--bourse { grid-column: 1 / -1; }
+  .fiche-tete { grid-template-columns: 64px minmax(0, 1fr); }
+  .fiche-portrait { width: 64px; }
+  .fiche-tete .niveau { grid-column: 1 / -1; }
+  .charte--compacte .niveau-boutons { flex-direction: row; }
+  .charte--compacte .apparence-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .ressources--trois { grid-template-columns: minmax(0, 1fr); }
+}

@@ -1,0 +1,1823 @@
+{
+  "races": {
+    "humain": {
+      "label": "Humain",
+      "image": "img/humain.png",
+      "short_description": "Adaptables et diplomates, les humains excellent par leur élocution et leur ingéniosité.",
+      "description": "Ni les plus forts, ni les plus rapides, les humains compensent par leur ingéniosité et leur sens du commerce. Dans les tavernes comme dans les cours royales, leur art de la parole ouvre toutes les portes. Ils bâtissent des empires sur les mots autant que sur les épées.",
+      "points": [
+        {
+          "titre": "Mode de vie",
+          "texte": "Ils sont très largement majoritaires en Perfora, où un humain est chez lui partout. Ceux d'Akalla, au nord, sont endurcis par le froid."
+        }
+      ],
+      "pv": 100,
+      "reserve_magie": 100,
+      "skills": {
+        "Force": 5,
+        "Magie": 3,
+        "Résistance": 7,
+        "Vélocité": 6,
+        "Adresse": 7,
+        "Soin": 7,
+        "Vol à la tire": 7,
+        "Furtivité": 6,
+        "Fabrication": 8,
+        "Élocution": 11,
+        "Perception": 7,
+        "Intimidation": 6
+      }
+    },
+    "elfe": {
+      "label": "Elfe",
+      "image": "img/elfe.webp",
+      "short_description": "Gracieux et mystiques, les elfes possèdent une puissante réserve magique et une grande adresse.",
+      "description": "Vivant des siècles, les elfes ont développé une connexion profonde avec la magie et la nature. Leurs sens aiguisés et leur grâce naturelle en font des archers et des mages redoutables. Fiers et parfois distants, ils portent le poids des âges dans leurs yeux anciens.",
+      "points": [
+        {
+          "titre": "Mode de vie",
+          "texte": "Dans la forêt de Sylvaën, ils vivent dans des cités bâties dans les arbres. Quelques familles elfes vivent aussi en Itepia depuis l'époque où le royaume était grand, et gardent sa mémoire."
+        }
+      ],
+      "pv": 100,
+      "reserve_magie": 120,
+      "skills": {
+        "Force": 3,
+        "Magie": 11,
+        "Résistance": 5,
+        "Vélocité": 7,
+        "Adresse": 9,
+        "Soin": 6,
+        "Vol à la tire": 5,
+        "Furtivité": 6,
+        "Fabrication": 6,
+        "Élocution": 7,
+        "Perception": 8,
+        "Intimidation": 5
+      }
+    },
+    "kobold": {
+      "label": "Kobold",
+      "image": "img/kobold.jpg",
+      "short_description": "Petits mais coriaces, les kobolds excellent en résistance et intimidation.",
+      "description": "Ces petits humanoïdes écailleux vivent dans des tunnels souterrains et sont réputés pour leurs pièges ingénieux. Plus résistants qu'il n'y paraît, les kobolds compensent leur petite taille par une ténacité remarquable et une connaissance approfondie des sous-sols.",
+      "points": [
+        {
+          "titre": "Origine",
+          "texte": "Ils descendent directement des dragons. Chaque clan descend, dit-on, d'un dragon précis, dont il porte la couleur des écailles et le nom."
+        },
+        {
+          "titre": "Physique",
+          "texte": "Ils n'ont rien des petits kobolds des contes : un adulte mesure jusqu'à 1,70 m."
+        },
+        {
+          "titre": "Capacités",
+          "texte": "Certains kobolds peuvent voler et cracher du feu, mais ce pouvoir ne fonctionne pas toujours. Il peut naître sous le coup de la colère ou de la peur, et faire défaut au pire moment."
+        },
+        {
+          "titre": "Mode de vie",
+          "texte": "Ils vivent en clans dans le désert d'Ashkar, nomades entre les oasis, durs au soleil comme au combat, d'où leur grande Résistance."
+        },
+        {
+          "titre": "Culture",
+          "texte": "Un kobold est grand, endurant et fier de son sang de dragon, mais il ne sait jamais si son feu viendra quand il l'appelle."
+        }
+      ],
+      "pv": 100,
+      "reserve_magie": 100,
+      "skills": {
+        "Force": 8,
+        "Magie": 6,
+        "Résistance": 11,
+        "Vélocité": 7,
+        "Adresse": 3,
+        "Soin": 5,
+        "Vol à la tire": 7,
+        "Furtivité": 5,
+        "Fabrication": 7,
+        "Élocution": 6,
+        "Perception": 7,
+        "Intimidation": 8
+      }
+    },
+    "aarakocra": {
+      "label": "Aarakocra",
+      "image": "img/aarakocra.jpg",
+      "short_description": "Peuple ailé doté d'une adresse et d'une perception hors du commun.",
+      "description": "Ces êtres aviaires aux ailes majestueuses dominent les cieux. Leur vue perçante leur permet de repérer une proie à des lieues de distance. Libres et indépendants par nature, les aarakocras sont des éclaireurs et des archers incomparables.",
+      "points": [
+        {
+          "titre": "Mode de vie",
+          "texte": "Ils vivent en nids-cités dans les pics de Venthal, et servent de messagers et d'éclaireurs aux royaumes."
+        }
+      ],
+      "pv": 100,
+      "reserve_magie": 100,
+      "skills": {
+        "Force": 7,
+        "Magie": 5,
+        "Résistance": 7,
+        "Vélocité": 7,
+        "Adresse": 11,
+        "Soin": 6,
+        "Vol à la tire": 6,
+        "Furtivité": 3,
+        "Fabrication": 6,
+        "Élocution": 6,
+        "Perception": 10,
+        "Intimidation": 6
+      }
+    },
+    "firbolg": {
+      "label": "Firbolg",
+      "image": "img/Firbolg.webp",
+      "short_description": "Géants forestiers, les firbolgs sont les plus robustes avec des soins puissants.",
+      "description": "Gardiens ancestraux des grandes forêts, les firbolgs sont des géants doux qui vivent en harmonie avec la nature. Leur taille imposante cache une âme bienveillante et un talent naturel pour les soins. Rares sont ceux qui provoquent leur colère, car leur force est légendaire.",
+      "points": [
+        {
+          "titre": "Mode de vie",
+          "texte": "En Akalla, ils vivent dans les grandes forêts du nord et servent souvent de guérisseurs et de guides."
+        }
+      ],
+      "pv": 130,
+      "reserve_magie": 100,
+      "skills": {
+        "Force": 10,
+        "Magie": 6,
+        "Résistance": 8,
+        "Vélocité": 5,
+        "Adresse": 5,
+        "Soin": 11,
+        "Vol à la tire": 3,
+        "Furtivité": 4,
+        "Fabrication": 6,
+        "Élocution": 6,
+        "Perception": 7,
+        "Intimidation": 6
+      }
+    },
+    "gobelin": {
+      "label": "Gobelin",
+      "image": "img/gobelin.png",
+      "short_description": "Vifs et furtifs, les gobelins excellent dans le vol à la tire et la discrétion.",
+      "description": "Méprisés par beaucoup, les gobelins ont survécu en développant ruse et agilité. Leurs petits doigts agiles sont aussi à l'aise dans une poche que dans un couteau. Nombreux et organisés en clans turbulents, ils sont plus dangereux qu'on ne le croit.",
+      "points": [
+        {
+          "titre": "Mode de vie",
+          "texte": "En Perfora, ils peuplent les bas quartiers des villes. Beaucoup de gobelins des villes de Perfora ont de la famille dans les marais de Grisemare."
+        }
+      ],
+      "pv": 100,
+      "reserve_magie": 100,
+      "skills": {
+        "Force": 5,
+        "Magie": 6,
+        "Résistance": 6,
+        "Vélocité": 8,
+        "Adresse": 7,
+        "Soin": 6,
+        "Vol à la tire": 11,
+        "Furtivité": 10,
+        "Fabrication": 6,
+        "Élocution": 4,
+        "Perception": 8,
+        "Intimidation": 3
+      }
+    },
+    "elfe_noir": {
+      "label": "Elfe Noir",
+      "image": "img/elfe_noir.jpg",
+      "short_description": "Maîtres de l'ombre et de la magie des ténèbres.",
+      "description": "Exilés des royaumes elfiques, les elfes noirs ont trouvé refuge dans les profondeurs souterraines. Ils ont développé une affinité pour la magie sombre et l'art de l'assassinat. Impitoyables et élégants, ils excellent autant dans les couloirs du pouvoir que dans l'obscurité des cryptes.",
+      "pv": 100,
+      "reserve_magie": 120,
+      "skills": {
+        "Force": 6,
+        "Magie": 9,
+        "Résistance": 6,
+        "Vélocité": 6,
+        "Adresse": 5,
+        "Soin": 3,
+        "Vol à la tire": 8,
+        "Furtivité": 11,
+        "Fabrication": 5,
+        "Élocution": 6,
+        "Perception": 6,
+        "Intimidation": 7
+      }
+    },
+    "tiefling": {
+      "label": "Tiefling",
+      "image": "img/Tiefling.webp",
+      "short_description": "Descendants de démons, puissants en magie et en intimidation.",
+      "description": "Portant le sang des plans infernaux, les tieflings sont marqués par des cornes, une queue et des yeux brillants. Cette hérédité maudite leur confère une puissance magique et une présence intimidante. Rejetés par beaucoup, ils apprennent tôt à se battre seuls.",
+      "points": [
+        {
+          "titre": "Origine",
+          "texte": "Selon la légende, ils sont nés d'un ancien pacte infernal, conclu dans les Terres cendrées."
+        },
+        {
+          "titre": "Mode de vie",
+          "texte": "L'Inquisition de Visea a dispersé leur peuple aux quatre coins du continent. Ceux qui la fuient se cachent plus facilement en Akalla qu'ailleurs, en réfugiés."
+        }
+      ],
+      "pv": 100,
+      "reserve_magie": 120,
+      "skills": {
+        "Force": 7,
+        "Magie": 10,
+        "Résistance": 6,
+        "Vélocité": 6,
+        "Adresse": 7,
+        "Soin": 3,
+        "Vol à la tire": 6,
+        "Furtivité": 4,
+        "Fabrication": 6,
+        "Élocution": 6,
+        "Perception": 6,
+        "Intimidation": 11
+      }
+    },
+    "nain": {
+      "label": "Nain",
+      "image": "img/Nain.webp",
+      "short_description": "Maîtres forgerons, les nains ont la fabrication la plus haute et une résistance solide.",
+      "description": "Peuple des montagnes et des mines, les nains sont réputés pour leur artisanat sans égal. Leur robustesse leur permet de supporter des charges que peu peuvent imaginer. Honorables et têtus, ils gardent rancune jusqu'à la fin des temps mais sont les alliés les plus loyaux qui soient.",
+      "points": [
+        {
+          "titre": "Mode de vie",
+          "texte": "Ils sont nombreux en Perfora, grâce à Nirea. Ceux de Nirea sont souvent forgerons ou mineurs, fiers de leur ville et agacés qu'on la croie perforienne."
+        }
+      ],
+      "pv": 100,
+      "reserve_magie": 100,
+      "skills": {
+        "Force": 7,
+        "Magie": 4,
+        "Résistance": 10,
+        "Vélocité": 3,
+        "Adresse": 6,
+        "Soin": 5,
+        "Vol à la tire": 6,
+        "Furtivité": 7,
+        "Fabrication": 11,
+        "Élocution": 8,
+        "Perception": 8,
+        "Intimidation": 5
+      }
+    },
+    "homme_poisson": {
+      "label": "Homme-Poisson",
+      "image": "img/homme_poisson.jpg",
+      "short_description": "Peuple aquatique avec une perception et des soins exceptionnels.",
+      "description": "Issus des profondeurs océaniques, les hommes-poissons ont adapté leurs capacités à la vie sur terre. Leur sens de la perception dépasse tout ce que les races terrestres peuvent imaginer. Liés à l'eau, ils apportent leurs arts de guérison développés dans les fonds marins.",
+      "points": [
+        {
+          "titre": "Culture",
+          "texte": "Une culture raffinée : musique, poésie, art du corail sculpté, et une étiquette de cour très stricte. Pour un homme-poisson, les gens de la surface sont un peu rustres."
+        },
+        {
+          "titre": "Mode de vie",
+          "texte": "Poli et observateur, un homme-poisson venu à la surface a peut-être été envoyé par sa famille, ou il est parti pour fuir l'étouffante cour de corail de Lumeer."
+        }
+      ],
+      "pv": 110,
+      "reserve_magie": 110,
+      "skills": {
+        "Force": 6,
+        "Magie": 7,
+        "Résistance": 6,
+        "Vélocité": 7,
+        "Adresse": 6,
+        "Soin": 9,
+        "Vol à la tire": 5,
+        "Furtivité": 5,
+        "Fabrication": 3,
+        "Élocution": 8,
+        "Perception": 11,
+        "Intimidation": 5
+      }
+    },
+    "orc": {
+      "label": "Orc",
+      "image": "img/Orc.webp",
+      "short_description": "Guerriers nés, les orcs sont les plus forts et les plus intimidants.",
+      "description": "Craints dans tout le monde connu, les orcs sont des guerriers nés. Leur force colossale et leur résistance légendaire en font des adversaires terrifiants au combat. Leur société tribale valorise le courage avant tout, et leurs chefs sont ceux qui ont survécu aux pires batailles.",
+      "points": [
+        {
+          "titre": "Mode de vie",
+          "texte": "Dans les steppes de Gorr : élevage, chasse, et raids sur les frontières quand l'hiver est dur. Un orc vient des steppes et découvre les lois de Perfora, ou il est né dans le royaume et n'a jamais connu la liberté des clans."
+        },
+        {
+          "titre": "Culture",
+          "texte": "Un respect sincère pour quiconque gagne un combat loyal. Dans les steppes, un orc qui revient de Perfora avec la marque d'un bracelet au poignet est vu soit comme un traître, soit comme un survivant, selon les clans. Celui qui a grandi en Perfora, avec un bracelet au poignet ou un garant sur le dos, sait ce que vaut la liberté."
+        }
+      ],
+      "pv": 120,
+      "reserve_magie": 100,
+      "skills": {
+        "Force": 11,
+        "Magie": 5,
+        "Résistance": 10,
+        "Vélocité": 5,
+        "Adresse": 4,
+        "Soin": 5,
+        "Vol à la tire": 7,
+        "Furtivité": 5,
+        "Fabrication": 7,
+        "Élocution": 3,
+        "Perception": 6,
+        "Intimidation": 10
+      }
+    },
+    "tabaxis": {
+      "label": "Tabaxis",
+      "image": "img/Tabaxis.webp",
+      "short_description": "Félins agiles, les tabaxis excellent en vélocité, adresse et furtivité.",
+      "description": "Ces humanoïdes félins sont réputés pour leur grâce et leur agilité. Curieux de nature et attirés par les objets brillants, ils parcourent le monde à la recherche de nouvelles expériences. Leurs griffes acérées et leurs réflexes fulgurants en font des combattants imprévisibles.",
+      "pv": 100,
+      "reserve_magie": 100,
+      "skills": {
+        "Force": 6,
+        "Magie": 6,
+        "Résistance": 3,
+        "Vélocité": 11,
+        "Adresse": 10,
+        "Soin": 4,
+        "Vol à la tire": 8,
+        "Furtivité": 8,
+        "Fabrication": 5,
+        "Élocution": 6,
+        "Perception": 8,
+        "Intimidation": 5
+      }
+    }
+  },
+  "metiers": {
+    "gladiateur": {
+      "label": "Gladiateur",
+      "short_description": "Champion des arènes, implacable combattant.",
+      "bonus": {
+        "Force": 2,
+        "Résistance": 2
+      },
+      "pouvoir": {
+        "name": "Rage guerrière",
+        "effect": "1 fois par combat : ne subit que la moitié des dégâts pendant 2 tours."
+      }
+    },
+    "druide": {
+      "label": "Druide",
+      "short_description": "Gardien de la nature, maître des soins.",
+      "bonus": {
+        "Soin": 2,
+        "Magie": 1,
+        "Perception": 1
+      },
+      "pouvoir": {
+        "name": "Dialogue animal",
+        "effect": "Peut parler aux animaux, sans limite."
+      }
+    },
+    "mage": {
+      "label": "Mage",
+      "short_description": "Maître des arcanes, puissant lanceur de sorts.",
+      "bonus": {
+        "Magie": 2,
+        "Réserve magique": 20
+      },
+      "pouvoir": {
+        "name": "Polyglotte et Canalisation",
+        "effect": "Connaît toutes les langues courantes. 1 fois par combat, un sort coûte moitié moins de magie."
+      }
+    },
+    "chasseur": {
+      "label": "Chasseur",
+      "short_description": "Traqueur expert, redoutable face aux créatures.",
+      "bonus": {
+        "Adresse": 2,
+        "Résistance": 1,
+        "Perception": 1
+      },
+      "pouvoir": {
+        "name": "Connaissance animale",
+        "effect": "+5 dégâts contre les créatures non humanoïdes."
+      }
+    },
+    "assassin": {
+      "label": "Assassin",
+      "short_description": "Ombre mortelle, maître de la furtivité.",
+      "bonus": {
+        "Adresse": 2,
+        "Furtivité": 2
+      },
+      "pouvoir": {
+        "name": "Disparition ninja",
+        "effect": "1 fois par combat : invisible pendant 2 tours. S'arrête s'il attaque, mais cette attaque fait +1D20 de dégâts."
+      }
+    },
+    "forgeron": {
+      "label": "Forgeron",
+      "short_description": "Artisan du métal, forge les meilleures armes.",
+      "bonus": {
+        "Fabrication": 2,
+        "Force": 2
+      },
+      "pouvoir": {
+        "name": "Amitié forgeronne",
+        "effect": "-20 % chez les forgerons, et répare l'équipement du groupe pendant un repos."
+      }
+    },
+    "barde": {
+      "label": "Barde",
+      "short_description": "Conteur et musicien, inspire ses alliés.",
+      "bonus": {
+        "Élocution": 2,
+        "Magie": 1,
+        "Perception": 1
+      },
+      "pouvoir": {
+        "name": "Chant mélodieux",
+        "effect": "1 fois par combat, coûte 20 PM : +2 à une compétence pour tout le groupe pendant 3 tours."
+      }
+    },
+    "artisan": {
+      "label": "Artisan",
+      "short_description": "Créateur polyvalent, toujours une ressource en réserve.",
+      "bonus": {
+        "Élocution": 2,
+        "Fabrication": 2
+      },
+      "pouvoir": {
+        "name": "Trouvaille",
+        "effect": "1 fois par jour, lance 1D20 : 1 à 10 objet commun, 11 à 17 objet utile, 18-19 objet rare, 20 arme ou objet de niv. 2."
+      }
+    },
+    "coursier": {
+      "label": "Coursier",
+      "short_description": "Le plus rapide du royaume, nul ne peut l'attraper.",
+      "bonus": {
+        "Vélocité": 2,
+        "Perception": 2
+      },
+      "pouvoir": {
+        "name": "Technique Joestar",
+        "effect": "1 fois par jour : fuite garantie (pour lui seul)."
+      }
+    },
+    "voleur": {
+      "label": "Voleur",
+      "short_description": "Doigts agiles, toujours à l'affût des opportunités.",
+      "bonus": {
+        "Vol à la tire": 2,
+        "Vélocité": 2
+      },
+      "pouvoir": {
+        "name": "Sens de l'argent",
+        "effect": "Repère les gens riches, sans limite."
+      }
+    }
+  },
+  "physical_descriptions": {
+    "taille": [
+      "Petit(e)",
+      "Moyen(ne)",
+      "Grand(e)",
+      "Très grand(e)",
+      "Colossal(e)"
+    ],
+    "corpulence": [
+      "Mince",
+      "Athlétique",
+      "Musclé(e)",
+      "Imposant(e)",
+      "Frêle"
+    ],
+    "cheveux": [
+      "Courts noirs",
+      "Longs dorés",
+      "Rasés",
+      "Tresses ornées",
+      "Blancs comme neige",
+      "Roux flamboyants",
+      "Bouclés bruns"
+    ],
+    "yeux": [
+      "Marron naturels",
+      "Bleus comme l'océan",
+      "Verts comme la forêt",
+      "Dorés lumineux",
+      "Rouges ardents",
+      "Violets mystiques"
+    ],
+    "peau": [
+      "Claire",
+      "Mate",
+      "Sombre",
+      "Écailleuse",
+      "Tatouages runiques",
+      "Marquée de cicatrices de bataille"
+    ],
+    "style": [
+      "Cape de voyage usée",
+      "Armure ornée de runes",
+      "Robe de mage",
+      "Tenue de cuir souple",
+      "Haillons de mendiant",
+      "Habit de noble déchu"
+    ],
+    "signes_distinctifs": [
+      "Cicatrice de bataille en travers du visage",
+      "Marque runique sur la main",
+      "Bijou ancien de famille",
+      "Tatouage tribal",
+      "Œil de verre serti d'argent",
+      "Médaillon d'une divinité oubliée",
+      "Capuche constamment rabaissée"
+    ]
+  },
+  "royaumes": {
+    "perfora": {
+      "label": "Perfora",
+      "type": "Royaume",
+      "dirigeant": "Roi de Perfora",
+      "races": "Humains, nains, gobelins",
+      "relations": "Lois dures contre les orques ; tient Nirea",
+      "description": "Des champs de blé à perte de vue, des routes pavées qui ne désemplissent pas et une capitale qui ne dort jamais : bienvenue en Perfora, le plus grand royaume du continent.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Des plaines à blé, des routes pavées et des villages partout. Perfora est le cœur commercial et politique des terres humaines."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Une monarchie forte. Le roi s'appuie sur une noblesse terrienne et sur les grandes guildes marchandes."
+        },
+        {
+          "titre": "Les villages",
+          "texte": "La plupart des villages du continent sont en Perfora. Chacun a son seigneur, sa milice et ses vieilles querelles avec le village d'à côté. C'est là que commencent beaucoup d'aventuriers."
+        },
+        {
+          "titre": "La loi sur les orques",
+          "texte": "La loi de Perfora est très dure avec les orques. Un orque ne peut pas circuler librement : il doit être accompagné d'un garant, ou porter un bracelet de restriction qui bride sa force. Un orque sans accompagnateur ni bracelet peut être arrêté à vue."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Au nord, Perfora partage une longue frontière avec Akalla. Dans ses montagnes, la ville naine de Nirea est semi-indépendante et lui paie un tribut. À l'est, les clans orques des steppes de Gorr lui vouent une haine ancienne."
+        },
+        {
+          "titre": "Races",
+          "texte": "Surtout des humains, mais aussi beaucoup de nains, grâce à Nirea, et des gobelins, qui peuplent les bas quartiers des villes."
+        }
+      ],
+      "venir": "Venir d'ici, c'est avoir grandi dans un village où chacun connaît son seigneur et ses voisins, ou dans les rues d'une capitale qui ne dort jamais."
+    },
+    "akalla": {
+      "label": "Akalla",
+      "type": "Royaume",
+      "dirigeant": "Roi Vaelor II",
+      "races": "Humains, firbolgs, tieflins",
+      "relations": "Voisin de Perfora ; accueille les Naavir-Muur",
+      "description": "Au nord de Perfora, la neige couvre les pins la moitié de l'année : bienvenue en Akalla, royaume de froid, de convois armés et de secrets bien gardés.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Un royaume de neige et de pins. L'hiver y dure la moitié de l'année. On y survit grâce au bois, à la fourrure, au minerai et au commerce avec le sud."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Le roi Vaelor II règne sur une monarchie militaire. Les routes sont dangereuses : chaque convoi a son escorte, et les escortes sont un vrai métier."
+        },
+        {
+          "titre": "La Citadelle Noire",
+          "texte": "Une forteresse sombre au cœur du royaume. Peu de gens savent ce qu'on y garde, et encore moins ce qu'on y apporte."
+        },
+        {
+          "titre": "Les étrangers riches",
+          "texte": "Akalla manque d'or et accueille ceux qui en ont. La maison tabaxi Naavir, lignée Muur, dirigée par Seema Naavir-Muur, s'y est installée pour le commerce, pas par loyauté. Elle prête à la moitié des nobles du royaume."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Voisin de Perfora, avec qui il partage une longue frontière. Les tieflins qui fuient l'Inquisition de Visea se cachent plus facilement en Akalla qu'ailleurs, en réfugiés."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des humains endurcis par le froid, des firbolgs, qui vivent dans les grandes forêts du nord et servent souvent de guérisseurs et de guides, et des tieflins réfugiés."
+        }
+      ],
+      "venir": "Venir d'ici, c'est être rude, se méfier des gens du sud, et connaître le prix d'une nuit dehors en plein hiver."
+    },
+    "itepia": {
+      "label": "Itepia",
+      "type": "Petit royaume",
+      "dirigeant": "Roi Lefrop",
+      "races": "Humains, elfes",
+      "relations": "Ennemi de Visea",
+      "description": "Quelques vallées autour d'une capitale, et le souvenir d'une grandeur perdue : Itepia est un petit royaume qui cherche à retrouver sa gloire d'antan.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Il ne reste d'Itepia que quelques vallées autour de sa capitale. On y parle de son passé plus que de son avenir."
+        },
+        {
+          "titre": "Histoire",
+          "texte": "Vers 1198, Visea envahit Itepia et lui prend la majorité de ses terres. Le royaume survit, mais presque entièrement détruit."
+        },
+        {
+          "titre": "Le rêve du roi Lefrop",
+          "texte": "En 1248, le roi Lefrop décide de relever son royaume. Pour cela, il lui faut de l'argent, beaucoup d'argent. Mais en ces temps anciens, le seul moyen d'en avoir est de posséder de nombreuses terres, et Itepia a perdu la plupart des siennes cinquante ans plus tôt. Pour les reprendre, il faudrait faire la guerre, et un royaume si petit, avec une si petite armée, ne peut pas rêver de grandes conquêtes."
+        },
+        {
+          "titre": "Les autres armes du roi",
+          "texte": "Faute d'armée, Lefrop cherche d'autres moyens : des alliances, des mercenaires, des prêts de banquiers comme les Naavir, et des aventuriers prêts à faire ce qu'une armée ne peut pas faire."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Ennemi de Visea. De l'autre côté de la frontière, le roi Ryan de Visea surveille chacun des gestes de Lefrop. Ici, on hait Visea d'une haine tranquille, transmise de père en fils. Les elfes de la forêt de Sylvaën étaient autrefois ses alliés."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des humains, et quelques familles elfes qui vivent là depuis l'époque où le royaume était grand, et qui gardent sa mémoire."
+        }
+      ],
+      "venir": "Venir d'ici, c'est avoir grandi dans un royaume qui parle de son passé plus que de son avenir, et avoir peut-être une bonne raison d'en vouloir à Visea."
+    },
+    "visea": {
+      "label": "Visea",
+      "type": "Royaume",
+      "dirigeant": "Roi Ryan",
+      "races": "Humains, elfes noirs",
+      "relations": "A conquis Itepia ; berceau de l'Inquisition",
+      "description": "Une armée qui marche au pas, une administration qui compte tout et l'ombre de l'Inquisition : Visea est le royaume conquérant du continent.",
+      "points": [
+        {
+          "titre": "Atmosphère",
+          "texte": "Ici, tout est compté : les terres, les récoltes, les hommes. Les terres prises à Itepia ont fait la fortune du royaume."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Le roi Ryan gouverne avec une armée de métier très disciplinée. Au pouvoir, des humains, avec une vieille noblesse d'elfes noirs qui conseille les rois depuis des siècles. On dit que ce sont eux qui ont poussé Visea à la conquête."
+        },
+        {
+          "titre": "Histoire",
+          "texte": "C'est le roi Ryan qui a presque détruit Itepia, et il n'a jamais rendu une seule terre prise. Ces terres sont exactement l'argent qui manque aujourd'hui au roi Lefrop."
+        },
+        {
+          "titre": "L'Inquisition",
+          "texte": "Née à Visea, elle traque la magie interdite, les cultes et surtout les tieflins, qu'elle juge marqués par les enfers. Son influence dépasse les frontières du royaume : c'est elle qui a dispersé les tieflins aux quatre coins du continent."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Itepia la hait et rêve de retrouver ses terres. Le roi Ryan surveille chacun des gestes du roi Lefrop."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des humains, et des elfes noirs, dont la vieille noblesse qui conseille le trône."
+        }
+      ],
+      "venir": "Venir d'ici, c'est être discipliné, instruit, souvent arrogant… et avoir peut-être quitté le royaume après avoir vu ce que fait l'Inquisition."
+    },
+    "nirea": {
+      "label": "Nirea",
+      "type": "Ville semi-indépendante",
+      "dirigeant": "Conseil des maîtres de clans",
+      "races": "Nains",
+      "relations": "Paie un tribut à Perfora",
+      "description": "Le bruit des marteaux résonne jusqu'au fond des galeries : Nirea, ville minière creusée dans les montagnes de Perfora, forge les meilleures armes du continent.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Une ville creusée dans la montagne. On y trouve du fer, de l'argent, des gemmes, et des galeries si profondes que certaines ont été murées pour de bonnes raisons."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Un conseil des maîtres de clans miniers et forgerons. Sur le papier, Nirea fait partie de Perfora ; en réalité, elle vit selon ses propres lois."
+        },
+        {
+          "titre": "Statut",
+          "texte": "Semi-indépendante. Nirea paie un tribut à Perfora en métal et en armes ; en échange, le roi la laisse se gouverner seule et aucun soldat humain n'entre dans les mines."
+        },
+        {
+          "titre": "Réputation",
+          "texte": "Les meilleures armes et armures du continent sortent de ses forges. Un forgeron formé à Nirea est respecté partout."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des nains, souvent forgerons ou mineurs."
+        }
+      ],
+      "venir": "Venir d'ici, c'est connaître la chaleur des forges et le silence des galeries, et ne jamais laisser dire que Nirea est perforienne."
+    },
+    "lumeer": {
+      "label": "Lumeer",
+      "type": "Royaume sous-marin",
+      "dirigeant": "Couronne de Lumeer et grandes familles",
+      "races": "Hommes-poissons",
+      "relations": "Commerce avec tous les ports",
+      "description": "Sous les vagues brillent des palais de corail : Lumeer, la cité-royaume des hommes-poissons, s'étend sur presque tous les océans du monde.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Une cité sous-marine réputée pour ses palais de corail, et une cour à l'étiquette très stricte."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Lumeer est la capitale, mais chaque océan est tenu par sa propre grande famille, avec ses coutumes et ses rivalités. Toutes reconnaissent la couronne de Lumeer, certaines plus volontiers que d'autres."
+        },
+        {
+          "titre": "Lien avec la surface",
+          "texte": "Les hommes puissants de Lumeer remontent souvent à terre pour faire leurs affaires : commerce de perles, de sel et de navigation, négociations avec les ports, et parfois des affaires plus discrètes."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Lumeer commerce avec tous les ports. Aucun navire ne traverse un océan sans qu'elle le sache : les rois de la surface le savent, et ne se brouillent jamais avec elle."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des hommes-poissons."
+        }
+      ],
+      "venir": "Venir d'ici, c'est avoir grandi entre les palais de corail et l'étiquette de la cour, et être monté à la surface, envoyé par sa famille ou pour fuir cette cour étouffante."
+    },
+    "ashkar": {
+      "label": "Désert d'Ashkar",
+      "type": "Clans",
+      "dirigeant": "Chefs de clan",
+      "races": "Kobolds",
+      "relations": "Ne reconnaissent aucun roi",
+      "description": "Du sable à perte de vue, des oasis qu'on se dispute et des ruines anciennes : le désert d'Ashkar est le grand désert du sud.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Un immense désert, sous un soleil dur, où les clans kobolds vont d'oasis en oasis."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Pas de roi : des chefs de clan. Les clans se disputent les oasis et les ruines anciennes."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Les clans commercent peu avec les royaumes et ne reconnaissent aucun roi. Pour eux, seuls les dragons ont été des souverains."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des kobolds, en clans nomades."
+        }
+      ],
+      "venir": "Venir d'ici, c'est connaître le chemin des oasis, savoir se battre pour un point d'eau, et ne s'incliner devant aucun roi."
+    },
+    "gorr": {
+      "label": "Steppes de Gorr",
+      "type": "Clans",
+      "dirigeant": "Chefs de guerre et chamanes",
+      "races": "Orques",
+      "relations": "Haine envers Perfora",
+      "description": "Des steppes à perte de vue, et personne pour y porter un bracelet : à l'est de Perfora, les orques vivent en clans libres dans les steppes de Gorr.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "De grandes steppes, loin des lois qui brident les orques en Perfora. On y vit d'élevage et de chasse."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Chaque clan suit le plus fort de ses guerriers, mais les anciens et les chamanes ont le dernier mot sur les guerres et les alliances."
+        },
+        {
+          "titre": "Les raids",
+          "texte": "Quand l'hiver est dur, les clans lancent des raids sur les frontières. Ce sont ces raids que Perfora invoque pour justifier ses lois."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Une haine ancienne envers Perfora, et une méfiance envers tous les autres."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des orques, en clans libres."
+        }
+      ],
+      "venir": "Venir d'ici, c'est avoir connu la liberté des clans et l'espace des steppes, et savoir ce que Perfora pense des orques."
+    },
+    "sylvaen": {
+      "label": "Forêt de Sylvaën",
+      "type": "Cités des arbres",
+      "dirigeant": "Conseil elfe",
+      "races": "Elfes",
+      "relations": "Ancien allié d'Itepia",
+      "description": "Entre Perfora et Itepia s'étend une immense forêt ancienne, où les elfes ont bâti leurs cités dans les arbres.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Une forêt immense et ancienne, avec des cités bâties dans les arbres."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Un conseil elfe."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Les elfes de Sylvaën étaient autrefois les alliés d'Itepia. Beaucoup se reprochent encore de ne pas l'avoir défendue contre Visea."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des elfes."
+        }
+      ],
+      "venir": "Venir d'ici, c'est avoir grandi dans les arbres, et porter peut-être un peu de ce vieux regret envers Itepia."
+    },
+    "kheshet": {
+      "label": "Comptoirs de Kheshet",
+      "type": "Villes marchandes",
+      "dirigeant": "Grandes maisons",
+      "races": "Tabaxis",
+      "relations": "Maison Naavir ; prêtent aux rois",
+      "description": "Une côte chaude, des ports animés et une seule règle : ici, tout se négocie. Bienvenue aux comptoirs de Kheshet.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Une chaîne de villes portuaires le long d'une côte chaude."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Les grandes maisons marchandes tabaxi, dont les Naavir. Ici, tout se négocie, et une dette se transmet comme un héritage."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Les grandes maisons prêtent aux rois. La lignée Muur de la maison Naavir, dirigée par Seema Naavir-Muur, s'est installée en Akalla, et le roi Lefrop d'Itepia compte sur les prêts de banquiers comme les Naavir."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des tabaxis."
+        }
+      ],
+      "venir": "Venir d'ici, c'est savoir que tout se négocie, et qu'une dette ne s'oublie jamais : elle se transmet comme un héritage."
+    },
+    "venthal": {
+      "label": "Pics de Venthal",
+      "type": "Nids-cités",
+      "dirigeant": "Anciens des nids",
+      "races": "Aarakocras",
+      "relations": "Messagers des royaumes",
+      "description": "Des montagnes si hautes qu'on ne les atteint qu'en volant : c'est là, dans les pics de Venthal, que les aarakocras ont bâti leurs nids-cités.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Des pics vertigineux, qu'on ne peut atteindre qu'en volant."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Les anciens des nids."
+        },
+        {
+          "titre": "Relations",
+          "texte": "Les nids-cités louent leurs messagers et leurs éclaireurs aux royaumes qui paient bien."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des aarakocras."
+        }
+      ],
+      "venir": "Venir d'ici, c'est avoir vu le monde d'en haut, et avoir peut-être porté les messages des rois."
+    },
+    "grisemare": {
+      "label": "Marais de Grisemare",
+      "type": "Bandes",
+      "dirigeant": "Chefs de bande",
+      "races": "Gobelins",
+      "relations": "Marché noir de Perfora",
+      "description": "Brume, passages secrets et marchés noirs : à l'ouest de Perfora, les marais de Grisemare n'obéissent qu'à leurs chefs de bande.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Des marais brumeux, pleins de passages secrets."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Pas de roi : des chefs de bande, et des bandes rivales."
+        },
+        {
+          "titre": "Relations",
+          "texte": "C'est ici que vit le marché noir de Perfora. Beaucoup de gobelins des villes de Perfora ont de la famille dans les marais."
+        },
+        {
+          "titre": "Races",
+          "texte": "Des gobelins."
+        }
+      ],
+      "venir": "Venir d'ici, c'est connaître les passages secrets dans la brume, et savoir où vendre ce qui ne se vend pas ailleurs."
+    },
+    "terres_cendrees": {
+      "label": "Terres cendrées",
+      "type": "Terre maudite",
+      "dirigeant": "Aucun",
+      "races": "Tieflins",
+      "relations": "Traqués par l'Inquisition",
+      "description": "Une terre de cendres et de volcans, que l'on dit maudite : c'est ici que la légende situe l'ancien pacte infernal d'où sont nés les tieflins.",
+      "points": [
+        {
+          "titre": "Paysage",
+          "texte": "Une région volcanique et maudite, où peu de gens vivent encore."
+        },
+        {
+          "titre": "Gouvernement",
+          "texte": "Personne ne la gouverne."
+        },
+        {
+          "titre": "Histoire",
+          "texte": "L'Inquisition de Visea en a chassé les tieflins. Depuis, peu y vivent encore."
+        },
+        {
+          "titre": "Races",
+          "texte": "Quelques tieflins, devenus rares."
+        }
+      ],
+      "venir": "Venir d'ici, c'est être né sur une terre maudite que tout le monde fuit, avec l'Inquisition de Visea à ses trousses."
+    }
+  },
+  "sorts": {
+    "1": [
+      {
+        "nom": "Étincelle",
+        "effet": "Inflige {une} dégâts à un ennemi.",
+        "cout": 10
+      },
+      {
+        "nom": "Torrent",
+        "effet": "Inflige {une} dégâts et réduit la vitesse.",
+        "cout": 15
+      },
+      {
+        "nom": "Impact de Pierre",
+        "effet": "Inflige {une} dégâts et réduit la défense.",
+        "cout": 15
+      },
+      {
+        "nom": "Frappe Électrique",
+        "effet": "Inflige {une} dégâts et paralyse.",
+        "cout": 20
+      },
+      {
+        "nom": "Brise Douce",
+        "effet": "Aveugle un ennemi pendant 2 tours.",
+        "cout": 15
+      },
+      {
+        "nom": "Racines Légères",
+        "effet": "Immobilise un ennemi.",
+        "cout": 15
+      },
+      {
+        "nom": "Soin Mineur",
+        "effet": "Restaure 1D20 PV à un allié.",
+        "cout": 15
+      },
+      {
+        "nom": "Flamme Dansante",
+        "effet": "Inflige {une} dégâts et brûle l’ennemi.",
+        "cout": 15
+      },
+      {
+        "nom": "Souffle Violent",
+        "effet": "Repousse les ennemis et inflige {zone} dégâts.",
+        "cout": 10
+      },
+      {
+        "nom": "Bouclier de Roche",
+        "effet": "Augmente la défense d’un allié de 20 %.",
+        "cout": 10
+      },
+      {
+        "nom": "Étincelle Rapide",
+        "effet": "Inflige {une} dégâts et augmente votre vitesse.",
+        "cout": 15
+      },
+      {
+        "nom": "Ombre Furtive",
+        "effet": "Permet de se fondre dans l’ombre pendant 1 tour, augmentant l’esquive.",
+        "cout": 15
+      },
+      {
+        "nom": "Gel",
+        "effet": "Inflige {une} dégâts et ralentit l'ennemi pendant 1 tour.",
+        "cout": 15
+      },
+      {
+        "nom": "Dard de Poison",
+        "effet": "Inflige {une} dégâts, puis 5 dégâts par tour pendant 2 tours.",
+        "cout": 15
+      },
+      {
+        "nom": "Provocation",
+        "effet": "Force un ennemi à attaquer le lanceur pendant 1 tour.",
+        "cout": 10
+      },
+      {
+        "nom": "Purification",
+        "effet": "Retire un poison, une brûlure ou une paralysie à un allié.",
+        "cout": 15
+      },
+      {
+        "nom": "Charme Mineur",
+        "effet": "Rend un PNJ amical le temps d'une discussion (+2 en Élocution).",
+        "cout": 15
+      },
+      {
+        "nom": "Lumière",
+        "effet": "Crée une lumière qui éclaire la zone pendant 1 heure.",
+        "cout": 5
+      },
+      {
+        "nom": "Main de Mage",
+        "effet": "Déplace un petit objet à distance.",
+        "cout": 5
+      },
+      {
+        "nom": "Détection de Magie",
+        "effet": "Repère les objets et créatures magiques proches.",
+        "cout": 10
+      },
+      {
+        "nom": "Pas de Brume",
+        "effet": "Le lanceur se téléporte ; jusqu'à son prochain tour, seules les attaques à distance et les sorts peuvent le viser.",
+        "cout": 10
+      },
+      {
+        "nom": "Braises Persistantes",
+        "effet": "Inflige 1D10 dégâts par tour à tous les ennemis pendant 3 tours.",
+        "cout": 15
+      },
+      {
+        "nom": "Lame Enchantée",
+        "effet": "L'arme d'un allié inflige +1D10 dégâts pendant 3 tours.",
+        "cout": 15
+      },
+      {
+        "nom": "Peau d'Écorce Mineure",
+        "effet": "Un allié gagne +1D10 d'armure pendant 3 tours.",
+        "cout": 15
+      }
+    ],
+    "2": [
+      {
+        "nom": "Boule de Feu",
+        "effet": "Inflige {zone} dégâts en zone.",
+        "cout": 30
+      },
+      {
+        "nom": "Lames de Vent",
+        "effet": "Inflige {une} dégâts à un ennemi et augmente la vitesse du lanceur.",
+        "cout": 20
+      },
+      {
+        "nom": "Voile d’Ombre",
+        "effet": "Rend le lanceur invisible pendant 3 tours.",
+        "cout": 25
+      },
+      {
+        "nom": "Cécité",
+        "effet": "Diminue la précision d’un ennemi de 50 % pendant 2 tours.",
+        "cout": 25
+      },
+      {
+        "nom": "Soin Supérieur",
+        "effet": "Restaure 2D20 PV à un allié.",
+        "cout": 30
+      },
+      {
+        "nom": "Drain de Vie",
+        "effet": "Inflige {une} dégâts et soigne le lanceur du même montant.",
+        "cout": 25
+      },
+      {
+        "nom": "Graines Explosives",
+        "effet": "Inflige {zone} dégâts en zone.",
+        "cout": 25
+      },
+      {
+        "nom": "Clarté",
+        "effet": "Restaure 2D20 PM à un allié.",
+        "cout": 20
+      },
+      {
+        "nom": "Invocation de Loup",
+        "effet": "Invoque un loup infligeant 1D20 dégâts par attaque.",
+        "cout": 30
+      },
+      {
+        "nom": "Évasion Spectrale",
+        "effet": "Téléporte le lanceur à courte distance et annule les attaques en cours.",
+        "cout": 30
+      },
+      {
+        "nom": "Chaîne d'Éclairs",
+        "effet": "Inflige {une} dégâts à un ennemi, puis {zone} à un deuxième.",
+        "cout": 30
+      },
+      {
+        "nom": "Flèche Acide",
+        "effet": "Inflige {une} dégâts et réduit la défense de l'ennemi.",
+        "cout": 25
+      },
+      {
+        "nom": "Armure de Glace",
+        "effet": "Réduit les dégâts reçus par le lanceur de 30 % pendant 2 tours.",
+        "cout": 25
+      },
+      {
+        "nom": "Peau d'Écorce",
+        "effet": "Augmente la défense d'un allié de 30 % pendant 3 tours.",
+        "cout": 20
+      },
+      {
+        "nom": "Sommeil",
+        "effet": "Endort un ennemi faible pendant 2 tours (il se réveille s'il est frappé).",
+        "cout": 25
+      },
+      {
+        "nom": "Silence",
+        "effet": "Empêche un ennemi de lancer des sorts pendant 2 tours.",
+        "cout": 25
+      },
+      {
+        "nom": "Illusion",
+        "effet": "Crée une copie du lanceur ; la prochaine attaque contre lui a 50 % de chances de toucher la copie.",
+        "cout": 20
+      },
+      {
+        "nom": "Marche sur l'Eau",
+        "effet": "Le groupe peut marcher sur l'eau pendant 10 minutes.",
+        "cout": 20
+      },
+      {
+        "nom": "Bouclier Arcanique",
+        "effet": "Absorbe les 25 prochains dégâts subis par un allié.",
+        "cout": 25
+      },
+      {
+        "nom": "Sauvetage",
+        "effet": "Téléporte un allié hors de la mêlée ; jusqu'à son prochain tour, seules les attaques à distance et les sorts peuvent le viser.",
+        "cout": 25
+      },
+      {
+        "nom": "Nuage Acide",
+        "effet": "Inflige 1D20 dégâts par tour à tous les ennemis pendant 3 tours.",
+        "cout": 30
+      },
+      {
+        "nom": "Cri de Guerre",
+        "effet": "Tous les alliés gagnent +3 pour toucher pendant 2 tours.",
+        "cout": 30
+      }
+    ],
+    "3": [
+      {
+        "nom": "Raz-de-Marée",
+        "effet": "Inflige {zone} dégâts en zone et repousse les ennemis.",
+        "cout": 50
+      },
+      {
+        "nom": "Tornade",
+        "effet": "Inflige {zone} dégâts en zone et aveugle les ennemis.",
+        "cout": 40
+      },
+      {
+        "nom": "Éboulement",
+        "effet": "Inflige {zone} dégâts en zone et immobilise.",
+        "cout": 60
+      },
+      {
+        "nom": "Murmure de Peur",
+        "effet": "Fait fuir un ennemi faible pendant 1 tour.",
+        "cout": 35
+      },
+      {
+        "nom": "Régénération",
+        "effet": "Restaure 1D20 PV par tour pendant 3 tours.",
+        "cout": 35
+      },
+      {
+        "nom": "Réanimation Mineure",
+        "effet": "Réanime un squelette infligeant 2D20 dégâts par attaque.",
+        "cout": 35
+      },
+      {
+        "nom": "Esprit de Feu",
+        "effet": "Invoque un esprit infligeant 1D20 dégâts par tour.",
+        "cout": 50
+      },
+      {
+        "nom": "Mur de Feu",
+        "effet": "Inflige 2D20 dégâts à chaque passage.",
+        "cout": 40
+      },
+      {
+        "nom": "Prison de Lianes",
+        "effet": "Immobilise plusieurs ennemis. {zone} dégâts chacun.",
+        "cout": 40
+      },
+      {
+        "nom": "Cercle de Protection",
+        "effet": "Réduit les dégâts subis par les alliés de 20 %.",
+        "cout": 35
+      },
+      {
+        "nom": "Disparition Brumeuse",
+        "effet": "Transforme le lanceur en brume, le rendant intouchable pendant 1 tour.",
+        "cout": 40
+      },
+      {
+        "nom": "Blizzard",
+        "effet": "Inflige {zone} dégâts en zone et ralentit les ennemis.",
+        "cout": 45
+      },
+      {
+        "nom": "Foudre Ciblée",
+        "effet": "Inflige {une} dégâts à un ennemi et le paralyse 1 tour.",
+        "cout": 45
+      },
+      {
+        "nom": "Lance de Lumière",
+        "effet": "Inflige {une} dégâts à un ennemi, double contre les morts-vivants.",
+        "cout": 40
+      },
+      {
+        "nom": "Soin de Groupe",
+        "effet": "Restaure 2D20 PV à tous les alliés.",
+        "cout": 50
+      },
+      {
+        "nom": "Malédiction",
+        "effet": "L'ennemi a -3 à tous ses jets pendant 3 tours.",
+        "cout": 35
+      },
+      {
+        "nom": "Domination",
+        "effet": "Contrôle un ennemi faible pendant 1 tour.",
+        "cout": 45
+      },
+      {
+        "nom": "Contresort",
+        "effet": "Annule un sort ennemi de niv 1 ou 2.",
+        "cout": 35
+      },
+      {
+        "nom": "Métamorphose Animale",
+        "effet": "Le lanceur prend une forme animale pendant 3 tours (+3 en Force ou en Vélocité).",
+        "cout": 40
+      },
+      {
+        "nom": "Clignement",
+        "effet": "Pendant 3 tours, le lanceur esquive automatiquement la première attaque qui le vise à chaque tour.",
+        "cout": 35
+      },
+      {
+        "nom": "Mur de Force",
+        "effet": "Aucune attaque de mêlée ne peut toucher le groupe pendant 1 tour.",
+        "cout": 45
+      },
+      {
+        "nom": "Tempête de Grêle",
+        "effet": "Inflige 2D20 dégâts par tour à tous les ennemis pendant 3 tours.",
+        "cout": 45
+      },
+      {
+        "nom": "Arme Élémentaire",
+        "effet": "L'arme d'un allié inflige +2D10 dégâts pendant 3 tours.",
+        "cout": 40
+      }
+    ],
+    "4": [
+      {
+        "nom": "Orage Dévastateur",
+        "effet": "Inflige {zone} dégâts en zone.",
+        "cout": 80
+      },
+      {
+        "nom": "Tempête Électrique",
+        "effet": "Inflige {zone} dégâts en zone et paralyse.",
+        "cout": 50
+      },
+      {
+        "nom": "Barrière de Vent",
+        "effet": "Réduit les dégâts physiques reçus de 30 % pendant 2 tours.",
+        "cout": 40
+      },
+      {
+        "nom": "Fureur du Vent",
+        "effet": "Augmente la vitesse de tous les alliés pendant 2 tours.",
+        "cout": 50
+      },
+      {
+        "nom": "Voile de Glace",
+        "effet": "Réduit les dégâts magiques reçus de 40 % pendant 2 tours.",
+        "cout": 50
+      },
+      {
+        "nom": "Étreinte des Lianes",
+        "effet": "Immobilise un ennemi et inflige 2D20 dégâts par tour.",
+        "cout": 50
+      },
+      {
+        "nom": "Portail Mineur",
+        "effet": "Permet de se téléporter à courte distance.",
+        "cout": 40
+      },
+      {
+        "nom": "Explosion Nécrotique",
+        "effet": "Inflige {zone} dégâts en zone et affaiblit.",
+        "cout": 60
+      },
+      {
+        "nom": "Invocation de Golem",
+        "effet": "Invoque un golem protégeant un allié et infligeant 2D20 dégâts.",
+        "cout": 60
+      },
+      {
+        "nom": "Gardien des Plantes",
+        "effet": "Invoque une créature soignant 2D20 PV par tour.",
+        "cout": 60
+      },
+      {
+        "nom": "Dissolution Spectrale",
+        "effet": "Devient intangible pendant 2 tours, rendant impossible toute attaque physique.",
+        "cout": 50
+      },
+      {
+        "nom": "Pluie de Météores",
+        "effet": "Inflige {zone} dégâts en zone et brûle les ennemis.",
+        "cout": 75
+      },
+      {
+        "nom": "Rayon Solaire",
+        "effet": "Inflige {une} dégâts à un ennemi et l'aveugle 2 tours.",
+        "cout": 65
+      },
+      {
+        "nom": "Soin Majeur",
+        "effet": "Restaure 4D20 PV à un allié et retire tous ses malus.",
+        "cout": 60
+      },
+      {
+        "nom": "Prison de Glace",
+        "effet": "Enferme un ennemi dans la glace 2 tours (il ne peut ni agir ni être blessé).",
+        "cout": 55
+      },
+      {
+        "nom": "Hâte",
+        "effet": "Un allié joue deux fois par tour pendant 2 tours.",
+        "cout": 60
+      },
+      {
+        "nom": "Terreur",
+        "effet": "Tous les ennemis faibles fuient pendant 2 tours.",
+        "cout": 55
+      },
+      {
+        "nom": "Invocation d'Élémentaire",
+        "effet": "Invoque un élémentaire infligeant 2D20 dégâts par tour pendant 3 tours.",
+        "cout": 65
+      },
+      {
+        "nom": "Vol de Sort",
+        "effet": "Relance le dernier sort utilisé par un ennemi (niv 3 max).",
+        "cout": 60
+      },
+      {
+        "nom": "Téléportation de Groupe",
+        "effet": "Tout le groupe est hors de portée de la mêlée pendant 1 tour, et les ennemis de mêlée perdent leur prochaine attaque.",
+        "cout": 60
+      },
+      {
+        "nom": "Égide",
+        "effet": "Chaque allié absorbe les 30 prochains dégâts qu’il subit.",
+        "cout": 60
+      },
+      {
+        "nom": "Brasier Éternel",
+        "effet": "Inflige 3D20 dégâts par tour à tous les ennemis pendant 3 tours.",
+        "cout": 65
+      },
+      {
+        "nom": "Fureur Arcanique",
+        "effet": "Les attaques et les sorts des alliés infligent +1D20 dégâts pendant 2 tours.",
+        "cout": 60
+      }
+    ],
+    "5": [
+      {
+        "nom": "Résurrection",
+        "effet": "Ramène un allié KO à la vie avec 50 % de ses PV.",
+        "cout": 80
+      },
+      {
+        "nom": "Ombre Vivante",
+        "effet": "Inflige {une} dégâts et absorbe les PV de l’ennemi.",
+        "cout": 80
+      },
+      {
+        "nom": "Colère de l’Enfer",
+        "effet": "Inflige {zone} dégâts à tous les ennemis.",
+        "cout": 90
+      },
+      {
+        "nom": "Cyclone Mortel",
+        "effet": "Inflige {zone} dégâts en zone et aveugle les ennemis.",
+        "cout": 80
+      },
+      {
+        "nom": "Séisme",
+        "effet": "Inflige {zone} dégâts en zone et immobilise les ennemis.",
+        "cout": 70
+      },
+      {
+        "nom": "Armée des Morts",
+        "effet": "Réanime plusieurs squelettes infligeant 2D20 dégâts chacun.",
+        "cout": 90
+      },
+      {
+        "nom": "Absorption Magique",
+        "effet": "Annule un sort ennemi et récupère 5D20 PM.",
+        "cout": 70
+      },
+      {
+        "nom": "Disparition Absolue",
+        "effet": "Efface le lanceur du combat pendant 1D3 tours. Impossible d’être ciblé ou d’agir.",
+        "cout": 80
+      },
+      {
+        "nom": "Météore",
+        "effet": "Inflige {une} dégâts à un ennemi et {zone} à ceux autour.",
+        "cout": 85
+      },
+      {
+        "nom": "Jugement Divin",
+        "effet": "Inflige {une} dégâts, double contre les démons et les morts-vivants.",
+        "cout": 80
+      },
+      {
+        "nom": "Invocation de Dragon",
+        "effet": "Invoque un dragon infligeant 3D20 dégâts par tour pendant 3 tours.",
+        "cout": 90
+      },
+      {
+        "nom": "Pétrification",
+        "effet": "Change un ennemi en pierre pour toujours (ne marche pas sur les boss).",
+        "cout": 90
+      },
+      {
+        "nom": "Arrêt du Temps",
+        "effet": "Le lanceur joue 2 tours d'affilée, et ses sorts coûtent moitié prix pendant ces 2 tours.",
+        "cout": 90
+      },
+      {
+        "nom": "Sanctuaire",
+        "effet": "Aucun allié ne peut descendre sous 1 PV pendant 2 tours.",
+        "cout": 90
+      },
+      {
+        "nom": "Bénédiction Divine",
+        "effet": "Restaure 5D20 PV à tous les alliés.",
+        "cout": 90
+      },
+      {
+        "nom": "Portail",
+        "effet": "Téléporte le groupe vers un lieu déjà visité.",
+        "cout": 70
+      },
+      {
+        "nom": "Hâte de Masse",
+        "effet": "Tous les alliés jouent deux fois à leur prochain tour.",
+        "cout": 85
+      },
+      {
+        "nom": "Sanctuaire Divin",
+        "effet": "Aucun allié ne subit de dégâts pendant 1 tour (sauf les sorts ultimes ennemis).",
+        "cout": 80
+      },
+      {
+        "nom": "Pluie d'Étoiles",
+        "effet": "Inflige 4D20 dégâts par tour à tous les ennemis pendant 3 tours.",
+        "cout": 90
+      }
+    ],
+    "6": [
+      {
+        "nom": "Apocalypse",
+        "effet": "Inflige {zone} dégâts à tous les ennemis.",
+        "cout": 120
+      },
+      {
+        "nom": "Rayon d'Anéantissement",
+        "effet": "Inflige {une} dégâts à une cible ; ni le bouclier ni l'encaisse ne les réduisent.",
+        "cout": 110
+      },
+      {
+        "nom": "Cataclysme",
+        "effet": "Inflige {une} dégâts à une cible et {zone} à tous les autres ennemis.",
+        "cout": 130
+      }
+    ]
+  },
+  "degats_sorts": {
+    "1": {
+      "une": "1D20",
+      "zone": "1D10"
+    },
+    "2": {
+      "une": "2D20",
+      "zone": "1D20"
+    },
+    "3": {
+      "une": "3D20",
+      "zone": "2D20"
+    },
+    "4": {
+      "une": "5D20",
+      "zone": "3D20"
+    },
+    "5": {
+      "une": "7D20",
+      "zone": "5D20"
+    },
+    "6": {
+      "une": "9D20",
+      "zone": "6D20"
+    }
+  },
+  "paliers_competences": {
+    "Force": {
+      "effet": "Dégâts des armes de mêlée",
+      "abrege": "dégâts",
+      "valeurs": [
+        "aucun",
+        "+1D10",
+        "+2D10",
+        "+3D10",
+        "+4D10",
+        "+5D10",
+        "+5D10"
+      ]
+    },
+    "Adresse": {
+      "effet": "Dégâts des armes à distance",
+      "abrege": "dégâts",
+      "valeurs": [
+        "aucun",
+        "+1D10",
+        "+2D10",
+        "+3D10",
+        "+4D10",
+        "+5D10",
+        "+5D10"
+      ]
+    },
+    "Magie": {
+      "effet": "Sorts débloqués",
+      "abrege": "sorts",
+      "valeurs": [
+        "aucun",
+        "niveau I",
+        "niveaux I à II",
+        "niveaux I à III",
+        "niveaux I à IV",
+        "niveaux I à V",
+        "niveaux I à V et ultimes"
+      ],
+      "court": [
+        "aucun",
+        "niv. I",
+        "niv. II",
+        "niv. III",
+        "niv. IV",
+        "niv. V",
+        "ultimes"
+      ]
+    },
+    "Résistance": {
+      "effet": "Encaisse réussie",
+      "abrege": "encaisse",
+      "valeurs": [
+        "1D5",
+        "1D10",
+        "2D10",
+        "3D10",
+        "4D10",
+        "5D10",
+        "5D10"
+      ]
+    },
+    "Soin": {
+      "effet": "PV rendus par la compétence",
+      "abrege": "soin",
+      "valeurs": [
+        "1D10",
+        "1D20",
+        "1D20 + 1D10",
+        "2D20",
+        "2D20 + 2D10",
+        "4D20",
+        "4D20"
+      ]
+    }
+  },
+  "armes_magiques": {
+    "Bâton": {
+      "resume": "Arme de mêlée magique à deux mains (pas de bouclier) : réduit le coût en PM de tous les sorts.",
+      "reduction_pm": {
+        "1": 10,
+        "2": 15,
+        "3": 20,
+        "4": 25,
+        "5": 30
+      },
+      "melee": {
+        "1": "1D10",
+        "2": "2D10",
+        "3": "3D10",
+        "4": "4D10",
+        "5": "5D10"
+      },
+      "mains": 2
+    },
+    "Sceptre": {
+      "resume": "Arme de mêlée magique à une main : ajoute des dés aux sorts d'attaque.",
+      "bonus_sorts": {
+        "1": "1D10",
+        "2": "1D10",
+        "3": "1D20",
+        "4": "1D20",
+        "5": "2D20"
+      },
+      "melee": {
+        "1": "1D10",
+        "2": "2D10",
+        "3": "3D10",
+        "4": "4D10",
+        "5": "5D10"
+      },
+      "mains": 1
+    }
+  },
+  "descriptions_competences": {
+    "Force": "Toucher et frapper avec les armes de mêlée : épées, haches, dagues, bâtons, sceptres… Son palier ajoute des D10 aux dégâts.",
+    "Magie": "Débloquer les niveaux de sorts. Seule la Magie réelle compte, sans les objets.",
+    "Résistance": "Encaisser les coups : une encaisse réussie réduit les dégâts reçus des dés de son palier.",
+    "Vélocité": "Être rapide : courir, fuir, réagir vite. Les armures et boucliers de niveau 2 et 3 la réduisent.",
+    "Adresse": "Toucher avec les armes à distance : arcs, arbalètes, frondes, javelots… Son palier ajoute des D10 aux dégâts.",
+    "Soin": "Soigner un allié avec sa compétence : un soin réussi rend les PV de son palier.",
+    "Vol à la tire": "Dérober une bourse ou un objet sans se faire prendre.",
+    "Furtivité": "Se cacher et se déplacer sans bruit.",
+    "Fabrication": "Fabriquer, réparer et bricoler objets et équipement.",
+    "Élocution": "Convaincre, négocier, marchander, charmer.",
+    "Perception": "Remarquer un détail, un piège ou une embuscade.",
+    "Intimidation": "Faire peur et imposer sa volonté par la menace."
+  },
+  "equipement": {
+    "melee": {
+      "label": "Armes de mêlée",
+      "onglet": "Mêlée",
+      "un": "une arme de mêlée",
+      "aucun": "Aucune arme de mêlée.",
+      "exemple": "Épée runique",
+      "competence": "Force",
+      "libelle_type": "Type d'arme",
+      "types": [
+        "Épée",
+        "Hache",
+        "Masse",
+        "Lance",
+        "Fléau",
+        "Fourche",
+        "Dague",
+        "Rapière",
+        "Bâton",
+        "Sceptre",
+        "Autre"
+      ],
+      "niveaux": 5,
+      "degats": {
+        "1": "1D20",
+        "2": "2D20",
+        "3": "3D20",
+        "4": "4D20",
+        "5": "5D20"
+      }
+    },
+    "distance": {
+      "label": "Armes à distance",
+      "onglet": "Distance",
+      "un": "une arme à distance",
+      "aucun": "Aucune arme à distance.",
+      "exemple": "Arc de frêne",
+      "competence": "Adresse",
+      "libelle_type": "Type d'arme",
+      "types": [
+        "Arc",
+        "Arbalète",
+        "Couteaux de lancer",
+        "Fronde",
+        "Javelot",
+        "Autre"
+      ],
+      "niveaux": 5,
+      "degats": {
+        "1": "1D20",
+        "2": "2D20",
+        "3": "3D20",
+        "4": "4D20",
+        "5": "5D20"
+      }
+    },
+    "armure": {
+      "label": "Armures",
+      "onglet": "Armure",
+      "singulier": "Armure",
+      "un": "une armure",
+      "aucun": "Aucune armure.",
+      "exemple": "Cotte de mailles",
+      "niveaux": 3,
+      "defense": {
+        "1": "1D10",
+        "2": "2D10",
+        "3": "3D10"
+      },
+      "malus": {
+        "competence": "Vélocité",
+        "valeurs": {
+          "1": 0,
+          "2": -1,
+          "3": -2
+        }
+      }
+    },
+    "bouclier": {
+      "label": "Boucliers",
+      "onglet": "Bouclier",
+      "singulier": "Bouclier",
+      "un": "un bouclier",
+      "aucun": "Aucun bouclier.",
+      "exemple": "Écu de chêne",
+      "niveaux": 3,
+      "mains": 1,
+      "defense": {
+        "1": "1D10",
+        "2": "2D10",
+        "3": "3D10"
+      },
+      "malus": {
+        "competence": "Vélocité",
+        "valeurs": {
+          "1": 0,
+          "2": -1,
+          "3": -2
+        }
+      }
+    },
+    "objet": {
+      "label": "Objets et artefacts",
+      "onglet": "Objets",
+      "un": "un objet",
+      "aucun": "Aucun objet ni artefact.",
+      "exemple": "Amulette de jade",
+      "libelle_type": "Type",
+      "types": [
+        "Potion",
+        "Bracelet",
+        "Amulette",
+        "Trousse de soin",
+        "Artefact",
+        "Accessoire",
+        "Consommable",
+        "Autre"
+      ],
+      "bonus": true
+    }
+  },
+  "groupes_equipement": [
+    {
+      "cle": "arme",
+      "bouton": "Arme",
+      "titre": "Ajouter une arme",
+      "categories": [
+        "melee",
+        "distance"
+      ]
+    },
+    {
+      "cle": "protection",
+      "bouton": "Armure",
+      "titre": "Ajouter une armure ou un bouclier",
+      "categories": [
+        "armure",
+        "bouclier"
+      ]
+    },
+    {
+      "cle": "objet",
+      "bouton": "Objet",
+      "titre": "Ajouter un objet",
+      "categories": [
+        "objet"
+      ]
+    }
+  ]
+}

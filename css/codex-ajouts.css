@@ -1,0 +1,431 @@
+/* ═══════════════════════════════════════════════════════════════
+   CODEX DES HÉROS — ajouts : royaume d'origine, sorts, téléchargement
+   Ce fichier n'écrase aucune règle existante : il ne fait que compléter
+   les composants du site (variables, .champ, .lettrine-bloc, .bouton…).
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Champs : listes déroulantes et zones de texte ───────────── */
+
+.champ select,
+.champ textarea {
+  width: 100%;
+  padding: .3rem .1rem .4rem;
+  border: 0;
+  border-bottom: 1px solid var(--filet-fort);
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--encre);
+  font-family: var(--f-titre);
+  font-size: 1.25rem;
+  transition: border-color .25s, box-shadow .25s;
+}
+.champ select {
+  padding-right: 1.6rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 L6 6.5 L11 1.5' fill='none' stroke='%237b6954' stroke-width='1.4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .2rem center;
+  background-size: .8rem;
+}
+.champ select option { font-family: var(--f-texte); font-size: 1rem; color: var(--encre); }
+.champ textarea { min-height: 5rem; resize: vertical; font-size: 1.15rem; line-height: 1.5; }
+.champ select:focus,
+.champ textarea:focus {
+  outline: none;
+  border-bottom-color: var(--lapis);
+  box-shadow: 0 1px 0 0 var(--lapis);
+}
+.champ--plein { grid-column: 1 / -1; }
+.champ--compact .champ-libelle { font-size: .9rem; }
+.champ--compact input,
+.champ--compact select { font-size: 1.12rem; padding: .15rem .1rem .25rem; }
+
+/* Boutons désactivés */
+.bouton:disabled {
+  opacity: .42;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Le dé tourne aussi sur les nouveaux boutons « Tirer à la roue » */
+.lance .de { animation: roule .7s var(--ressort); }
+
+/* Chiffres romains plus larges (VI, VII) : ils débordent dans la marge
+   au lieu d'être coupés. Sans effet visible sur les chapitres I à V. */
+@media (min-width: 761px) {
+  .chapitre-num { justify-self: end; white-space: nowrap; }
+}
+
+/* ─── Identité : quatre champs (l'origine vient du royaume, ch. VI) ─ */
+
+@media (min-width: 761px) {
+  #ch-identite .champ { grid-column: span 3; }
+}
+@media (max-width: 760px) {
+  #ch-identite .champ:last-child { grid-column: span 1; }
+}
+
+/* ─── Royaume d'origine : fenêtre de détail (même folio que les races) ─ */
+
+/* La lettrine reste dans son paragraphe, même quand le texte est court. */
+#royaumeModal .texte-lettrine { display: flow-root; }
+#royaumeModal .titre-filet { margin-top: 1.7rem; }
+#royaumeModal .glose { max-width: none; margin-top: 1.2rem; }
+
+/* ─── Vocation ─────────────────────────────────────────────────── */
+
+#vocationRegle { margin-top: 1.3rem; }
+
+.liste-points--texte { columns: 1; margin-bottom: .5rem; }
+.liste-points--texte .nom { flex: none; font-family: var(--f-capitales); }
+.liste-points--texte .val {
+  flex: 0 1 auto;
+  min-width: 0;
+  font-family: var(--f-titre);
+  font-weight: 400;
+  font-size: 1.18rem;
+}
+
+.royaume-point,
+.race-point {
+  margin-top: .75rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--encre-2);
+}
+.royaume-point-titre,
+.race-point-titre {
+  font-family: var(--f-capitales);
+  letter-spacing: .03em;
+  color: var(--rubrique);
+}
+.royaume-libre {
+  margin-top: 1.2rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--filet);
+  font-style: italic;
+  color: var(--vert-de-gris);
+}
+
+/* ─── Paliers de sorts ─────────────────────────────────────────── */
+
+.sorts-magie {
+  font-family: var(--f-capitales);
+  font-size: 1.15rem;
+  color: var(--encre-2);
+}
+.sorts-magie b {
+  margin: 0 .15rem;
+  font-family: var(--f-chiffres);
+  font-weight: 500;
+  font-size: 1.55rem;
+  font-variant-numeric: lining-nums;
+  color: var(--lapis);
+}
+
+.paliers {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr)); /* aucun, niv. I à V, ultime */
+  gap: 4px;
+  margin: .9rem 0 .7rem;
+  padding: 0;
+  list-style: none;
+}
+.palier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .45rem .3rem .4rem;
+  text-align: center;
+  background: rgba(251, 246, 234, .55);
+  box-shadow: inset 0 0 0 1px var(--filet);
+}
+.palier-nom {
+  font-family: var(--f-capitales);
+  font-size: 1rem;
+  color: var(--encre-3);
+}
+.palier-seuil {
+  font-family: var(--f-chiffres);
+  font-size: .9rem;
+  font-variant-numeric: lining-nums;
+  color: var(--encre-3);
+}
+.palier.est-atteint {
+  background: linear-gradient(180deg, rgba(242, 220, 150, .55), rgba(191, 148, 67, .22));
+  box-shadow: inset 0 0 0 1px var(--or-2);
+}
+.palier.est-atteint .palier-nom { color: var(--encre); }
+.palier.est-actuel { box-shadow: inset 0 0 0 2px var(--lapis); }
+.palier.est-actuel .palier-nom { color: var(--lapis); }
+
+/* Choix du palier avant un tirage de sort : mêmes cases, en boutons */
+.paliers--choix { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+button.palier {
+  width: 100%;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: box-shadow .25s, background-color .25s;
+}
+button.palier:hover:not(:disabled) { box-shadow: inset 0 0 0 1px var(--lapis); }
+button.palier[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--lapis); }
+button.palier[aria-pressed="true"] .palier-nom { color: var(--lapis); }
+button.palier:disabled { cursor: not-allowed; opacity: .5; }
+button.palier:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
+
+/* ─── Cartes (emplacements de sorts, objets…) ─────────────────── */
+
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.6rem;
+}
+.carte {
+  position: relative;
+  display: flow-root;
+  padding: 1.1rem 1.2rem 1.1rem 1.05rem;
+  border-radius: 2px;
+  background-color: rgba(251, 246, 234, .5);
+  box-shadow: inset 0 0 0 1px var(--filet);
+  transition: background-color .3s, box-shadow .3s;
+}
+.carte.est-choisie,
+.carte.est-equipe {
+  background-color: var(--velin-clair);
+  box-shadow:
+    inset 0 0 0 1px var(--or-1),
+    inset 0 0 0 4px var(--velin-clair),
+    inset 0 0 0 5px var(--or-2),
+    0 16px 30px -20px rgba(60, 38, 12, .6);
+}
+.carte.est-verrouille { background-color: rgba(224, 208, 174, .25); }
+.carte.est-verrouille .lettrine-bloc { filter: grayscale(.85); opacity: .6; }
+
+.carte-titre {
+  padding-top: .4rem;
+  font-family: var(--f-capitales);
+  font-size: 1.38rem;
+  line-height: 1.1;
+  color: var(--encre);
+  overflow-wrap: anywhere;
+}
+.carte-meta {
+  margin-top: .2rem;
+  font-style: italic;
+  font-size: .98rem;
+  color: var(--encre-3);
+}
+.carte-texte {
+  clear: both;
+  padding-top: .6rem;
+  font-size: 1.02rem;
+  line-height: 1.45;
+  color: var(--encre-2);
+}
+.carte-texte:empty { display: none; }
+.carte .champ { clear: both; padding-top: .7rem; }
+.carte-actions {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem .6rem;
+  margin-top: .8rem;
+  padding-top: .7rem;
+  border-top: 1px solid var(--filet);
+}
+
+/* ─── Registre : bouton de téléchargement ─────────────────────── */
+
+.registre-telecharger {
+  width: 100%;
+  margin-top: .9rem;
+}
+
+/* Barre de la fiche : avec un bouton de plus, les actions passent parfois
+   à la ligne ; elles restent alors alignées à droite. */
+@media (min-width: 761px) {
+  .barre-actions { margin-left: auto; justify-content: flex-end; }
+}
+
+/* ─── Palier d'une compétence (fiche) ─────────────────────────── */
+
+.comp-palier {
+  margin-top: .35rem;
+  font-style: italic;
+  font-size: .95rem;
+  line-height: 1.35;
+  color: var(--encre-3);
+}
+.comp-palier b {
+  font-family: var(--f-chiffres);
+  font-style: normal;
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
+  color: var(--encre);
+}
+.competence .comp-palier { grid-column: 1 / -1; margin-top: 0; }
+
+/* ─── Confirmation d'un retrait (« Retirer ce sort ? Oui / Annuler ») ─ */
+
+.carte-confirmation {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem .6rem;
+  animation: monte .35s var(--ease) both;
+}
+.carte-confirmation-question {
+  font-family: var(--f-capitales);
+  font-size: 1rem;
+  color: var(--rubrique);
+}
+
+/* ─── Fenêtres des races et royaumes : précédent / suivant ────── */
+
+.folio-navigation {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin: -.4rem 3.2rem 1.2rem 0; /* la croix de fermeture reste à droite */
+}
+.folio-fleche {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--filet-fort);
+  border-radius: 50%;
+  background: var(--velin-clair);
+  color: var(--encre-2);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color .25s, color .25s, border-color .25s;
+}
+.folio-fleche:hover { background: var(--encre); border-color: var(--encre); color: var(--velin); }
+.folio-position {
+  font-family: var(--f-chiffres);
+  font-style: italic;
+  font-variant-numeric: lining-nums;
+  color: var(--encre-3);
+}
+.est-feuillete > * { animation: monte .4s var(--ease) both; }
+
+/* ─── Page d'accueil : les règles du jeu ──────────────────────── */
+
+.frontispice > :nth-child(5) { animation-delay: .48s; }
+.frontispice-appel { margin-top: 2rem; }
+.frontispice-regles { margin-top: 1rem; }
+a.sceller { text-decoration: none; }
+
+.accueil-texte { margin-top: 1.4rem; }
+.accueil-texte p,
+.accueil-liste li {
+  max-width: 62ch;
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: var(--encre-2);
+}
+.accueil-texte b { font-weight: 600; color: var(--encre); }
+.accueil-texte p + p { margin-top: .7rem; }
+.accueil-texte .titre-filet { margin: 2rem 0 .8rem; font-size: 1.15rem; }
+.accueil-texte + .cartes,
+.accueil-texte + .tableau-defile,
+.accueil-texte + #accueilPaliersSorts { margin-top: 1.2rem; }
+
+/* Liste à losanges d'or, comme le don des métiers */
+.accueil-liste {
+  display: grid;
+  gap: .45rem;
+  margin: .6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.accueil-liste li { position: relative; padding-left: 1.3rem; }
+.accueil-liste li::before {
+  content: "";
+  position: absolute;
+  left: .2rem;
+  top: .62em;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: var(--or-2);
+}
+
+/* Exemple concret : filet vert-de-gris, comme les points à répartir */
+.accueil-texte .exemple {
+  margin-top: 1rem;
+  padding: .7rem .9rem;
+  font-style: italic;
+  background: rgba(60, 106, 85, .08);
+  border-left: 2px solid var(--vert-de-gris);
+}
+.exemple b {
+  font-family: var(--f-capitales);
+  font-style: normal;
+  font-weight: 400;
+  color: var(--vert-de-gris);
+}
+
+/* Tableaux de règles : filets fins, chiffres Garamond */
+.tableau-defile { overflow-x: auto; margin-top: 1rem; }
+.tableau-regles {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: lining-nums;
+}
+.tableau-regles th,
+.tableau-regles td {
+  padding: .45rem .6rem;
+  border-bottom: 1px solid var(--filet);
+  text-align: center;
+  white-space: nowrap;
+}
+.tableau-regles thead th {
+  font-family: var(--f-capitales);
+  font-weight: 400;
+  font-size: .98rem;
+  color: var(--encre-3);
+  border-bottom-color: var(--filet-fort);
+}
+.tableau-regles thead th.est-chiffre { font-family: var(--f-chiffres); font-size: 1rem; }
+.tableau-regles tbody th {
+  text-align: left;
+  font-family: var(--f-capitales);
+  font-weight: 400;
+  font-size: 1.08rem;
+  color: var(--encre);
+}
+.tableau-regles td {
+  font-family: var(--f-chiffres);
+  font-size: 1.05rem;
+  color: var(--encre);
+}
+.tableau-detail {
+  display: block;
+  font-family: var(--f-texte);
+  font-style: italic;
+  font-size: .9rem;
+  color: var(--encre-3);
+  white-space: normal;
+}
+
+.accueil-appel {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.6rem;
+}
+.accueil-appel .sceller { max-width: 26rem; margin-top: 0; }
+
+@media (max-width: 560px) {
+  .paliers { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .paliers--choix { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
